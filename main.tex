@@ -1,0 +1,212 @@
+%-----------------------------
+% Packages
+% ----------------------------
+
+% -------------------
+% Text Packages
+% -------------------
+
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{lineno}
+\usepackage[hidelinks]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+\usepackage{ragged2e}
+\usepackage[svgnames,table,xcdraw]{xcolor}
+\usepackage{lipsum}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage[version=4]{mhchem}
+
+% -------------------
+% Figure Packages
+% -------------------
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{subfigure}
+\usepackage{wrapfig} % Allows in-line images
+\usepackage[hypcap=false]{caption}
+\usepackage{amsmath}
+\usepackage[thinc]{esdiff}
+\graphicspath{ {./images/} }
+\usepackage{calc} % To reset the counter in the document after the title page
+\usepackage{enumitem} % Includes lists
+\newenvironment{Figure}
+    {\par\medskip\noindent\minipage{\linewidth}}
+    {\endminipage\par\medskip}
+\usepackage{diagbox}
+
+\usepackage{tikz}
+\usepackage{tabularray}
+\usepackage{array}
+
+% -------------------
+% Bibliography Packages
+% -------------------
+
+%\usepackage[backend=biber,style=phys,sorting=none,natbib=true,urldate=comp]{biblatex}
+%\addbibresource{/Users/danny/Documents/Courses/Year 4/Literature/Literature Review/Latex/bibliography.bib}
+%
+%\DeclareFieldFormat{doi}{\href{#1}{DOI:\space \ExternalLink}}
+%
+%\DeclareFieldFormat{url}{\href{#1}{URL:\space \ExternalLink}}
+
+% -------------------
+% Custom Commands
+% -------------------
+
+% Allows formation of multi-lined cells in tables
+\newcommand{\specialcell}[2][c]{%
+    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}} 
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip(-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+    \def\dbar{{\mathchar'26\mkern-12mu \mathrm{d}}}
+    
+%-----------------------
+% Set PDF Information
+%-----------------------
+
+\hypersetup{ 	
+pdfsubject = {Year Abroad},
+pdftitle = {Literature Review},
+pdfauthor = {Daniel Markhoff}
+}
+
+
+% ---------------------
+%
+% Begin
+%
+% ---------------------
+\def\pmbanner{{\hrule height 1 pt}\vskip35pt{Literature Review}\vskip35pt{\hrule height 4pt}\vskip20pt}
+
+\begin{document}
+
+
+
+\begin{frontmatter}
+
+    \title{\pmbanner Particle Identification in Modern Cherenkov Detectors}
+    
+    \author{Danny Markhoff}
+    \ead{d.markhoff@sms.ed.ac.uk, d.markhoff@gsi.de}
+
+    %\affil[1]{\footnotesize School of Physics and Astronomy, University of Edinburgh, Mayfield Road, Edinburgh EH9 3FD, United Kingdom}
+    %\affil[2]{\footnotesize GSI/FAIR, Planckstrasse 1, 64291 Darmstadt, Germany}
+
+    \affiliation[1]{organization={University of Edinburgh}, 
+                addressline={School of Physics and Astronomy, Mayfield Road},
+                postcode={EH9 3FD}, 
+                city={Edinburgh}, 
+                country={United Kingdom}}
+
+    \affiliation[2]{organization={GSI}, 
+                addressline={Planckstrasse 1},
+                postcode={64291}, 
+                city={Darmstadt}, 
+                country={Germany}}
+
+\begin{abstract}
+With major detector assemblies lining up for construction at high-energy facilities such as EIC, 
+technologies for particle identification are becoming ever more relevant. This review motivates the theory
+of the field, introduces the technologies behind modern Cherenkov detectors, and discusses the implementation 
+of these detectors into upcoming experiments.
+Emphasis is placed on ......
+Persistent challenges include ......
+We conclude by outlining promising future developments for ......
+\end{abstract}
+
+\begin{keyword}
+Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA \sep EIC \sep GSI
+\end{keyword}
+
+\end{frontmatter}
+
+\twocolumn[{
+  \begin{center}
+    \vspace{1em}
+    \tableofcontents
+    \vspace{1em}
+  \end{center}
+}]
+
+\section{Introduction}
+
+\section{Theoretical Foundations}
+\subsection{Cherenkov Radiation}
+\subsection{}
+
+\section{Photomultipliers}
+%MCP-PMTs
+%SiPMs
+%LAPPDs
+%HRPPDs
+
+\section{Photon Optics}
+%Lenses
+%Mirrors
+%Light Guides
+%Winston Cones
+
+\section{Ring Imaging Cherenkov Detectors (RICH)}
+%Proximity Focusing RICH at ePIC
+%ALICE at the LHC
+%Belle II at SuperKEKB
+
+\section{Detection of Internally Reflected Cherenkov Light (DIRC)}
+%BaBar DIRC at SLAC
+%hpDIRC at ePIC
+%PANDA DIRC at FAIR
+
+\section{Muon Identification with Cherenkov Detectors}
+%IceCube Neutrino Observatory
+%ANNIE FermiLab
+
+\section{Applications at Future Facilities}
+%EIC
+%FAIR
+
+\section{Current Challenges and Limitations}
+%ML PID
+%High Rate Environments
+%Radiation Damage
+%Large Area Coverage
+%SiPMs
+%Budget Constraints
+
+\section{Emerging Technologies}
+%LAPPDs
+%Deep Learning
+%Advanced Optics
+
+\section{Summary}
+
+\cite{Singh_2019}
+
+
+\bibliographystyle{apsrev} 
+\bibliography{bibliography}
+
+    \end{document}
