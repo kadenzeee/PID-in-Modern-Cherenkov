@@ -8,8 +8,10 @@
 
 \documentclass[final,5p,times,twocolumn]{elsarticle}
 
+
 \usepackage{lineno}
 \usepackage[hidelinks]{hyperref}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{tgbonum}
@@ -19,7 +21,6 @@
 \usepackage{lmodern}
 \usepackage{listings}
 \usepackage[version=4]{mhchem}
-\usepackage{glossaries}
 \usepackage{cuted}
 
 % -------------------
@@ -44,74 +45,14 @@
 \usepackage{tabularray}
 \usepackage{array}
 
-% -------------------
-% Bibliography Packages
-% -------------------
-
-%\usepackage[backend=biber,style=phys,sorting=none,natbib=true,urldate=comp]{biblatex}
-%\addbibresource{/Users/danny/Documents/Courses/Year 4/Literature/Literature Review/Latex/bibliography.bib}
-%
-%\DeclareFieldFormat{doi}{\href{#1}{DOI:\space \ExternalLink}}
-%
-%\DeclareFieldFormat{url}{\href{#1}{URL:\space \ExternalLink}}
-
-% -------------------
-% Custom Commands
-% -------------------
-
-% Allows formation of multi-lined cells in tables
-\newcommand{\specialcell}[2][c]{%
-    \begin{tabular}[#1]{@{}c@{}}#2\end{tabular}} 
-
-\newcommand{\ExternalLink}{%
-    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
-        \begin{scope}[x=1ex, y=1ex]
-            \clip(-0.1,-0.1) 
-                --++ (-0, 1.2) 
-                --++ (0.6, 0) 
-                --++ (0, -0.6) 
-                --++ (0.6, 0) 
-                --++ (0, -1);
-            \path[draw, 
-                line width = 0.5, 
-                rounded corners=0.5] 
-                (0,0) rectangle (1,1);
-        \end{scope}
-        \path[draw, line width = 0.5] (0.5, 0.5) 
-            -- (1, 1);
-        \path[draw, line width = 0.5] (0.6, 1) 
-            -- (1, 1) -- (1, 0.6);
-        }
-    }
-
-    \def\dbar{{\mathchar'26\mkern-12mu \mathrm{d}}}
-    
 %-----------------------
 % Set PDF Information
 %-----------------------
 
 \hypersetup{ 	
-pdfsubject = {Year Abroad},
+pdfsubject = {Year Abroad Level 11},
 pdftitle = {Literature Review},
 pdfauthor = {Daniel Markhoff}
-}
-
-% ---------------------
-% Glossary
-% ---------------------
-\makeglossaries
-
-\newglossaryentry{latex}
-{
-    name=latex,
-    description={Is a markup language specially suited 
-    for scientific documents}
-}
-
-\newglossaryentry{maths}
-{
-    name=mathematics,
-    description={Mathematics is what mathematicians do}
 }
 
 
@@ -152,7 +93,7 @@ pdfauthor = {Daniel Markhoff}
                 country={Germany}}
 
 \begin{abstract}
-With major detector assemblies lining up for construction at high-energy facilities such as EIC, 
+With major detector assemblies lining up for construction at high-energy facilities such as EIC and FAIR, 
 technologies for particle identification are becoming ever more relevant. This review motivates the theory
 of the field, introduces the technologies behind modern Cherenkov detectors, and discusses the implementation 
 of these detectors into upcoming experiments.
@@ -180,9 +121,8 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 
   Placement Supervisor: Dr. Jochen Schwiening \hfill j.schwiening@gsi.de
 
-  Edinburgh Advisor: idk \hfill idk@sms.ed.ac.uk
+  Edinburgh Advisor: Dr. Moritz Pascal Reiter \hfill mreiter@ed.ac.uk
 
-  Year Abroad Coordinator: Dr. Moritz Pascal Reiter \hfill mreiter@ed.ac.uk
 \end{strip}
 
 
@@ -202,6 +142,8 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 
 \section{Theoretical Foundations}
 \subsection{Cherenkov Radiation}
+\input{Sections/theoretical-foundations/cherenkov-radiation}
+
 \subsection{Relativistic Kinematics}
 \subsection{Optical Detector Theory}
 \subsection{Particle Physics Motivation}
@@ -256,10 +198,7 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 \cite{Singh_2019}
 
 
-\bibliographystyle{mnras} 
+\bibliographystyle{ieeetr-modified} 
 \bibliography{bibliography}
-
-
-\printglossaries
 
     \end{document}

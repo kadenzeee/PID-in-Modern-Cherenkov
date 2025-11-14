@@ -1,0 +1,67 @@
+% filepath: /Users/danny/Documents/Courses/Year 4/Literature/Literature Review/PID-in-Modern-Cherenkov/Sections/Theoretical Foundations/cherenkov-radiation.tex
+% Content for the "Cherenkov Radiation" subsection
+
+\label{sec:cherenkov-radiation}
+
+Cherenkov radiation is a phenomenon that occurs when a charged particle travels through a dielectric medium 
+with refractive index \(n(\lambda)\) at a speed greater than the phase velocity in that medium. This effect 
+was first observed by Pavel Čherenkov in 1934 \cite{Cherenkov_1937} and later explained theoretically by Ilya 
+Frank and Igor Tamm \cite{Frank_1937}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/cherenkov-light.png}
+\caption{\textbf{Cherenkov radiation in a nuclear reactor pool.} The characteristic glow is indicative 
+of relativistic electrons moving through the water. (Photo: IAEA)}\label{fig:cherenkov-light}
+\end{figure}
+
+From Maxwell's equations arises that electromagnetic propagation with wavelength \(\lambda\) will have its phase 
+velocity modified by the medium it is travelling through. This leads to the idea of refractive index \(n(\lambda) = c/v\), 
+defined as the ratio between the speed of light in vacuum \(c\) and the phase velocity \(v\) in the medium. The condition
+for Cherenkov radiation to occur is then given by \(v > c/n\).
+
+The Cherenkov radiation itself propagates at the phase velocity of the medium. As such, the radiation forms a 
+conical wavefront with characteristic angle \(\theta\), similar to how shock cones are formed by supersonic 
+aircraft. The angle \(\theta\) can be derived from simple geometric considerations shown in Fig \ref{fig:cherenkov-diagram}, yielding the following:
+
+\begin{equation}
+\cos{\theta} = \frac{v_p}{v} = \frac{c}{nv}
+\label{equ:cherenkov-critical-angle}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/cherenkov-diagram.png}
+\caption{\textbf{Schematic of a Cherenkov cone.} A particle travels through a medium with velocity \(v\). 
+Photons are emitted at the phase velocity \(v_{p}\) and angle \(\theta\) to the path of travel of the particle, 
+giving the characteristic blue shock cone.}\label{fig:cherenkov-diagram}
+\end{figure}
+
+The main principle behind a Cherenkov detector is to measure the angle \(\theta\) of the emitted photons,
+which can then be used to determine the velocity \(v\) of the charged particle. With an associated momentum
+measurement from a forward tracking detector, the mass of the particle can be inferred, allowing for spectroscopy.
+This velocity spectroscopy for various particle species is shown in Fig \ref{fig:cherenkov-angle-COMPASS}.
+It can be seen that pions, for example, will produce a larger Cherenkov angle than kaons or pions at the same momentum,
+due to them being less massive.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/cherenkov-angle.png}
+\caption{\textbf{Cherenkov spectroscopy of the COMPASS RICH-1 detector at CERN.} There are clear curves for different 
+particle species. These curves can be determined mathematically using \ref{equ:cherenkov-critical-angle} and relativistic
+dynamics. (Photo: \cite{Tessarotto_2014})}\label{fig:cherenkov-angle-COMPASS}
+\end{figure}
+
+The energy \(dE\) emitted per unit length is given by the Frank-Tamm formula, which can be expressed as
+
+\begin{equation}
+\frac{dE}{dx} = \frac{q^2}{4\pi}\int_{v>\frac{c}{n(\omega)}}\mu(\omega)\omega\left( 1 - \frac{c^2}{v^2n^2(\omega)}\right) d\omega
+\end{equation}
+
+for a particle with charge \(q\) and frequency \(\omega\), moving through a medium with permeability \(\mu\) and 
+refractive index \(n(\omega)\). The integral is taken over all frequencies where the Cherenkov condition \(v = c/n(\omega)\)
+is met. By changing variables to wavelength \(\lambda\) and using that \(E = Nh\omega\), one can show that the 
+number of photons \(N\) emitted per unit length is inversely proportional to the square of the wavelength. This
+explains the characteristic blue of Cherenkov radiation, as shorter wavelength (blue light) photons are emitted more.
+
+

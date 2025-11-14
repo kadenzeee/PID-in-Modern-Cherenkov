@@ -1,16 +1,16 @@
-\begin{thebibliography}{}
-\makeatletter
-\relax
-\def\mn@urlcharsother{\let\do\@makeother \do\$\do\&\do\#\do\^\do\_\do\%\do\~}
-\def\mn@doi{\begingroup\mn@urlcharsother \@ifnextchar [ {\mn@doi@} {\mn@doi@[]}}
-\def\mn@doi@[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href {http://dx.doi.org/#2} {doi:#2}\else \href {http://dx.doi.org/#2} {#1}\fi \endgroup}
-\def\mn@eprint#1#2{\mn@eprint@#1:#2::\@nil}
-\def\mn@eprint@arXiv#1{\href {http://arxiv.org/abs/#1} {{\tt arXiv:#1}}}
-\def\mn@eprint@dblp#1{\href {http://dblp.uni-trier.de/rec/bibtex/#1.xml} {dblp:#1}}
-\def\mn@eprint@#1:#2:#3:#4\@nil{\def\@tempa {#1}\def\@tempb {#2}\def\@tempc {#3}\ifx \@tempc \@empty \let \@tempc \@tempb \let \@tempb \@tempa \fi \ifx \@tempb \@empty \def\@tempb {arXiv}\fi \@ifundefined {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
+\begin{thebibliography}{1}
+\def\mn@doi[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href{http://dx.doi.org/#2}{#2}\else \href{http://dx.doi.org/#2}{#1}\fi}
 
-\bibitem[\protect\citeauthoryear{Singh et~al.,}{Singh et~al.}{2019}]{Singh_2019}
-Singh B.,  et~al., 2019, \mn@doi [Journal of Physics G: Nuclear and Particle Physics] {10.1088/1361-6471/aade3d}, 46, 045001
+\bibitem{Cherenkov_1937}
+P.~A. \ifmmode~\check{C}\else \v{C}\fi{}erenkov, ``{Visible Radiation Produced by Electrons Moving in a Medium with Velocities Exceeding that of Light},'' {\em \mn@doi[Phys. Rev.]{10.1103/PhysRev.52.378}}, vol.~52, pp.~378--379, Aug 1937.
 
-\makeatother
+\bibitem{Frank_1937}
+I.~M. Frank and I.~E. Tamm, ``{Coherent visible radiation of fast electrons passing through matter},'' {\em \mn@doi[Compt. Rend. Acad. Sci. URSS]{10.3367/UFNr.0093.196710o.0388}}, vol.~14, no.~3, pp.~109--114, 1937.
+
+\bibitem{Tessarotto_2014}
+F.~Tessarotto, P.~Abbon, M.~Alexeev, R.~Birsa, P.~Bordalo, F.~Bradamante, A.~Bressan {\em et~al.}, ``{Long term experience and performance of COMPASS RICH-1},'' {\em \mn@doi[Journal of Instrumentation]{10.1088/1748-0221/9/09/C09011}}, vol.~9, p.~C09011, 2014.
+
+\bibitem{Singh_2019}
+B.~Singh, W.~Erni, B.~Krusche, M.~Steinacher, N.~Walford, B.~Liu, H.~Liu {\em et~al.}, ``Technical design report for the {$\overline{{\rm{P}}}\mathrm{ANDA}$} {Barrel DIRC} detector,'' {\em \mn@doi[Journal of Physics G: Nuclear and Particle Physics]{10.1088/1361-6471/aade3d}}, vol.~46, no.~4, p.~045001, 2019.
+
 \end{thebibliography}
