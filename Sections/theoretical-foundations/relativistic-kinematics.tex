@@ -1,0 +1,49 @@
+% filepath: PID-in-Modern-Cherenkov/Sections/theoretical-foundations/relativistic-kinematics.tex
+% Content for the "Relativistic Kinematics" subsection
+
+\label{sec:relativistic-kinematics}
+
+Relativistic kinematics is the study of the motion of particles at near-light speeds. The purposes
+of this review do not require an exhaustive treatment of the subject, but a few key concepts
+pertaining to Cherenkov radiation and detector physics are summarised.
+
+The famous energy-mass relation is written as:
+
+\begin{equation}
+E^2 = p^2c^2 + m_{0}^2c^4
+\label{equ:energy-mass-relation}
+\end{equation}
+
+for a particle with energy \(E\), momentum \(p\) and rest mass \(m_{0}\). The Lorentz factor
+arises from considering the four-velocity, and defines a mapping between the rest frame of the 
+particle (the frame in which the particle's velocity is zero) and the observer's frame. It 
+is defined as:
+\begin{equation}
+\gamma = \frac{1}{\sqrt{1 - \beta^2}}
+\label{equ:lorentz-factor}
+\end{equation}
+where \(\beta = v/c\) is the velocity of the particle as a fraction of the speed of light. We 
+can use the Lorentz factor to transform Newtonian quantities into their relativistic equivalents 
+using the equations
+\begin{align}
+\label{equ:relativistic-momentum}
+p &= \gamma m_{0} v      \\
+\label{equ:relativistic-energy}
+E &= \gamma m_{0} c^2   
+\end{align} 
+
+Using \eqref{equ:relativistic-momentum} and \eqref{equ:relativistic-energy} we can rewrite the Cherenkov angle condition from \eqref{equ:cherenkov-critical-angle} 
+as
+\begin{equation}
+\cos{\theta} = \frac{c}{nv} = \frac{E}{npc} = \frac{\sqrt{p^2 + m^2c^2}}{np}
+\label{equ:cherenkov-angle-relativistic}
+\end{equation}
+where one can clearer see how a combination of the Cherenkov angle and the momentum measurements can 
+be used to infer the mass of the particle. This equation can be used to plot the theoretical curves
+for the experimental data in Fig \ref{fig:cherenkov-angle-COMPASS}. 
+
+Often in detector assemblies, the Cherenkov detectors will receive momentum measurements from forward detectors.
+Then, the statistics from the Cherenkov detectors are so impressive, that the detectors are usually able to decisively 
+improve on the forward detector's measurements. This is especially true for DIRC detectors, which have an
+excellent angular resolution. The back-and-forth between detectors often creates friendly competition within
+experimental collaborations.
