@@ -13,4 +13,8 @@ F.~Tessarotto, P.~Abbon, M.~Alexeev, R.~Birsa, P.~Bordalo, F.~Bradamante, A.~Bre
 \bibitem{Singh_2019}
 B.~Singh, W.~Erni, B.~Krusche, M.~Steinacher, N.~Walford, B.~Liu, H.~Liu {\em et~al.}, ``Technical design report for the {$\overline{{\rm{P}}}\mathrm{ANDA}$} {Barrel DIRC} detector,'' {\em \mn@doi[Journal of Physics G: Nuclear and Particle Physics]{10.1088/1361-6471/aade3d}}, vol.~46, no.~4, p.~045001, 2019.
 
+\bibitem{hpDIRC-Greg_2025}
+G.~Kalicy, ``{The hpDIRC for the ePIC Experiment}.'' Conference Session, 2025.
+\newblock \href{https://indico.gsi.de/event/20387/timetable/#57-hpdirc-detector-development}{XII International Workshop on Ring Imaging Cherenkov Detectors, Mainz, Germany}.
+
 \end{thebibliography}
