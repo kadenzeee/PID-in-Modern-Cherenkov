@@ -34,4 +34,11 @@ Z.~Liu, H.~Liu, P.~Chen, K.~Li, Y.~Wei, L.~He, X.~Zhao {\em et~al.}, ``{The Deve
 ``{Experience with series-produced MCP-PMTs for the PANDA Barrel DIRC}.'' Conference Session, 2025.
 \newblock \href{https://indico.gsi.de/event/20387/timetable/#13-experiences-with-series-pro}{XII International Workshop on Ring Imaging Cherenkov Detectors, Mainz, Germany}.
 
+\bibitem{ACERBI201916}
+F.~Acerbi and S.~Gundacker, ``{Understanding and simulating SiPMs},'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2018.11.118}}, vol.~926, pp.~16--35, 2019.
+\newblock Silicon Photomultipliers: Technology, Characterisation and Applications.
+
+\bibitem{hamamatsu_2016}
+S.~Piatek and Hamamatsu, ``{What is an SiPM and how does it work?}.'' Online, 2016.
+
 \end{thebibliography}
