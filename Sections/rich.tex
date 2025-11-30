@@ -1,0 +1,75 @@
+% filepath: PID-in-Modern-Cherenkov/Sections/rich.tex
+% Content for the "Ring Imaging Cherenkov Detectors (RICH)" subsection
+
+\label{sec:rich}
+
+Ring Imaging Cherenkov Detectors are a class of Cherenkov detectors that use a radiator
+at a known distance from a photodetector array to measure the Cherenkov angle of incident
+particles. Shown in Fig \ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH
+detector. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/simple-rich-detector.png}
+\caption{\textbf{Geant4 simulation of the simplified RICH detector.} The particle track (red) 
+is incident on some material with a refractive index \(n\), called the radiator. In this case,
+an aerogel radiator is simulated. The resulting Cherenkov photons (gray) emitted in a 
+cone are incident on a square array of sensitive photodetectors. In practice, the detector 
+array is often a ring, and there are optics surrounding the device to guide photons towards 
+the detector.}\label{fig:simple-rich}
+\end{figure}
+
+The Cherenkov angles are emitted in a cone around the particle track, necessitating the ring
+shape; having near light speed particles directly incident on photodetectors is likely to be
+expensive. The outer radius of the ring is often encased in mirrors or lenses to trap Cherenkov
+photons and guide them towards the photodetector array. These optical elements are carefully manufactured
+to minimise chromatic dispersion and to maintain angular resolution.
+
+\subsection{Radiators}
+
+Different RICH experiments use different radiator materials. Common choices include aerogel
+such as in the Belle II ARICH \cite{abe2010belleiitechnicaldesign}, gaseous radiators such as in
+the old LHCb RICH \cite{LHCbRICH2000technicaldesign} and (although in mostly retired detectors) 
+liquids such as in the barrel CRID at SLAC \cite{barrelCRID1999SLACtechnicalreport}.
+
+Consider the Cherenkov angle condition from Eq \ref{equ:cherenkov-critical-angle}. The radiator
+refractive index \(n\) is the key parameter that determines the choice of radiator, depending on 
+expected beam momenta. Higher refractive indices are necessary for lower momentum particles, which
+is why we see older accelerator systems using liquid radiators with inherently higher refractive indices.
+
+The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an
+important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The
+refractive index also affects the number of Cherenkov photons produced, as per the Frank-Tamm formula in 
+Eq \ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon
+yield, such as layering aerogel with different refractive indices without performance cost \cite{IIJIMA2005383}. 
+Naturally though complexity comes at a cost, especially in the case of finely engineered components such as
+Cherenkov radiators.
+
+\subsection{RICH Optics}
+
+Optical elements are often used in RICH detectors to increase photon yield. Lenses can be used to focus Cherenkov photons
+onto smaller photodetector areas, reducing cost and size. Mirrors can be used to reflect photons that would otherwise
+escape the detector. Other optical tricks such as the aforementioned layered radiator (also called proxy focusing) can be
+used to tighten the spread of the photon cone, allowing lower momentum charged particles to be measured. 
+
+As an applied example, the pfRICH at the forward section of the ePIC detector makes use of conical mirrors to increase 
+the acceptance angle of particle tracks which can be seen in Fig \ref{fig:pfrich-conical-mirrors}. More photons means
+better angular resolution, better event reconstruction and therefore more interesting physics. That's the idea anyway.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/pfRICH-conical-mirrors.png}
+\caption{\textbf{Schematic cross section of the pfRICH.} The conical mirrors (green) near the edge of the 
+vessel mean that Cherenkov photons can be detected from steeper angles than would be traditionally possible. (Photo: Brian Page, eIPC Collaboration \cite{pfRICH-Brian_2025})}\label{fig:pfrich-conical-mirrors}
+\end{figure}
+
+\subsection{Mechanics \& Integration}
+
+Modern detectors are large, complicated systems that enjoy premium real estate. Integrating a Cherenkov detector into such an 
+array presents a unique set of mechanical and design challenges. Mechanical tolerances and alignment are crucial to maintaining
+accuracy. Optical elements must be precisely aligned and consistently calibrated throughout the detector lifetime, requiring
+robust mechanical support and space-hungry laser calibration systems. Ensuring that the detector can be serviced and maintained
+is also a key consideration, especially for large scale experiments that may run for decades. Careful thermal and radiation management
+are also necessary to ensure the longevity of photosensitive components. Consideration of the surrounding magnetic field from
+the solenoid used by the TOF detectors is also necessary, especially for PMTs which are magneto-sensitive.
+These mechanical and integration challenges are often underappreciated, but are imperative to the success of a detector.

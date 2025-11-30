@@ -40,5 +40,33 @@ F.~Acerbi and S.~Gundacker, ``{Understanding and simulating SiPMs},'' {\em \mn@d
 
 \bibitem{hamamatsu_2016}
 S.~Piatek and Hamamatsu, ``{What is an SiPM and how does it work?}.'' Online, 2016.
+\newblock \href{https://hub.hamamatsu.com/us/en/technical-notes/mppc-sipms/what-is-an-SiPM-and-how-does-it-work.html}{Accessed: 2025-11-21}.
+
+\bibitem{ald-mcps-Popecki_2016}
+M.~A. Popecki, B.~Adams, C.~A. Craven, T.~Cremer, M.~R. Foley, A.~Lyashenko, A.~O'Mahony {\em et~al.}, ``Microchannel plate fabrication using glass capillary arrays with atomic layer deposition films for resistance and gain,'' {\em \mn@doi[Journal of Geophysical Research: Space Physics]{https://doi.org/10.1002/2016JA022580}}, vol.~121, no.~8, pp.~7449--7460, 2016.
+
+\bibitem{LYASHENKO2020162834}
+A.~Lyashenko, B.~Adams, M.~Aviles, T.~Cremer, C.~Ertley, M.~Foley, M.~Minot {\em et~al.}, ``Performance of large area picosecond photo-detectors (lappdtm),'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2019.162834}}, vol.~958, p.~162834, 2020.
+\newblock Proceedings of the Vienna Conference on Instrumentation 2019.
+
+\bibitem{abe2010belleiitechnicaldesign}
+T.~Abe, I.~Adachi, K.~Adamczyk, S.~Ahn, H.~Aihara, K.~Akai, M.~Aloi {\em et~al.}, ``\href{https://arxiv.org/abs/1011.0352}{Belle II Technical Design Report},'' 2010.
+
+\bibitem{LHCbRICH2000technicaldesign}
+S.~Amato, D.~Carvalho, P.~Colrain, T.~Da~Silva, J.~R.~T. De~Mello, L.~De~Paula, M.~Gandelman {\em et~al.}, {\em {\href{https://cds.cern.ch/record/494263}{LHCb RICH}}}.
+\newblock Technical design report. LHCb, Geneva: CERN, 2000.
+
+\bibitem{barrelCRID1999SLACtechnicalreport}
+J.~Va'vra, ``Long-term operational experience with the barrel crid at sld,'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/S0168-9002(99)00367-8}}, vol.~433, no.~1, pp.~59--70, 1999.
+
+\bibitem{IIJIMA2005383}
+T.~Iijima, S.~Korpar, I.~Adachi, S.~Fratina, T.~Fukushima, A.~Gorišek, H.~Kawai {\em et~al.}, ``A novel type of proximity focusing rich counter with multiple refractive index aerogel radiator,'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2005.05.030}}, vol.~548, no.~3, pp.~383--390, 2005.
+
+\bibitem{pfRICH-Brian_2025}
+B.~Page, ``{A Proximity Focusing RICH Detector for the ePIC Experiment at the EIC}.'' Conference Session, 2025.
+\newblock \href{https://indico.gsi.de/event/20387/timetable/#69-a-proximity-focusing-rich-d}{XII International Workshop on Ring Imaging Cherenkov Detectors, Mainz, Germany}.
+
+\bibitem{Fanelli_2025}
+C.~Fanelli, J.~Giroux, and J.~Stevens, ``{Deep(er) reconstruction of imaging Cherenkov detectors with swin transformers and normalizing flow models},'' {\em \mn@doi[Machine Learning: Science and Technology]{10.1088/2632-2153/ada8f4}}, vol.~6, p.~015028, feb 2025.
 
 \end{thebibliography}
