@@ -3,7 +3,7 @@
 
 \label{sec:rich}
 
-Ring Imaging Cherenkov Detectors are a class of Cherenkov detectors that use a radiator
+Ring Imaging Cherenkov Detectors (RICH) are a class of Cherenkov detectors that use a radiator
 at a known distance from a photodetector array to measure the Cherenkov angle of incident
 particles. Shown in Fig \ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH
 detector. 
@@ -45,7 +45,7 @@ yield, such as layering aerogel with different refractive indices without perfor
 Naturally though complexity comes at a cost, especially in the case of finely engineered components such as
 Cherenkov radiators.
 
-\subsection{RICH Optics}
+\subsection{Optics}
 
 Optical elements are often used in RICH detectors to increase photon yield. Lenses can be used to focus Cherenkov photons
 onto smaller photodetector areas, reducing cost and size. Mirrors can be used to reflect photons that would otherwise
@@ -68,8 +68,11 @@ vessel mean that Cherenkov photons can be detected from steeper angles than woul
 Modern detectors are large, complicated systems that enjoy premium real estate. Integrating a Cherenkov detector into such an 
 array presents a unique set of mechanical and design challenges. Mechanical tolerances and alignment are crucial to maintaining
 accuracy. Optical elements must be precisely aligned and consistently calibrated throughout the detector lifetime, requiring
-robust mechanical support and space-hungry laser calibration systems. Ensuring that the detector can be serviced and maintained
-is also a key consideration, especially for large scale experiments that may run for decades. Careful thermal and radiation management
+robust mechanical support and space-hungry laser calibration systems. Careful thermal and radiation management
 are also necessary to ensure the longevity of photosensitive components. Consideration of the surrounding magnetic field from
-the solenoid used by the TOF detectors is also necessary, especially for PMTs which are magneto-sensitive.
+the solenoid used by the TOF detectors is also necessary, especially for PMTs which are magneto-sensitive. 
+
+Ensuring that the detector can be serviced and maintained
+is also a key consideration, especially for large scale experiments that may run for decades. Some experiments are built on
+rails to allow the inner detectors (RICH, TOF, trackers etc.) the be slid out for maintenance.  
 These mechanical and integration challenges are often underappreciated, but are imperative to the success of a detector.

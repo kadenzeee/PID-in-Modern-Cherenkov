@@ -1,0 +1,36 @@
+% filepath: PID-in-Modern-Cherenkov/Sections/dirc.tex
+% Content for the "Detection of Internally Reflected Cherenkov Light" subsection
+
+\label{sec:dirc}
+
+There detectors, DIRC for short, are a type of Cherenkov detector that circumvent the need 
+for a separate radiator by using solid transparent, typically quartz, bars to both generate and guide 
+Cherenkov photons to the photodetectors. Fig \ref{fig:panda-bd-event-display} already
+introduced in Section \ref{sec:optical-detector-theory} showed a Geant4 simulation of the
+PANDA Barrel DIRC detector \cite{Singh_2019}, but Fig \ref{fig:panda-dirc} shows a more
+detailed rendering of the barrel detector itself. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{Images/panda-barrel-dirc.png}
+\caption{\textbf{The PANDA Barrel DIRC.} 16 individual DIRC detectors are laid in a 
+barrel-like arrangement, forming the very core of the detector array}\label{fig:panda-dirc}
+\end{figure}
+
+The basic principle of DIRC operation is similar to that of other Cherenkov detectors; charged
+particles incident on a medium with refractive index \(n>1\) emit Cherenkov photons in a cone,
+and we try to measure the principle angle of this cone. However, in a DIRC detector the complexity
+arises from the optics of trapping and guiding the Cherenkov photons to a small array of photodetectors.
+All principles from the RICH section \ref{sec:rich} apply to the DIRC also.
+
+\subsection{Guiding Photons via Internal Reflection}
+\label{sec:internal-reflection}
+
+\subsection{Event Reconstruction}
+\label{sec:event-reconstruction}
+
+\textcolor{red}{potential conflict with §\ref{sec:statistical-event-reconstruction-methods}. Is it better to
+expand that section, or to have a detailed section here with likelihood, time imaging, ML, and delete the one in the theory?}
+
+\subsection{Timing Resolution}
+\label{sec:timing-resolution}

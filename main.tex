@@ -115,7 +115,7 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
     \includegraphics[height=1.5cm]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg}
   \end{flushright}
 
-  \textit{For PwYA Literature Review} \hfill 6th January 2026
+  \textit{For PwYA Literature Review} \hfill 9th January 2026
 
   \vspace{1em}
 
@@ -139,8 +139,10 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 
 \clearpage
 \section{Introduction}
-
+\label{sec:intro}
+\input{Sections/introduction.tex}
 \section{Theoretical Foundations}
+\label{sec:theoretical-foundations}
 \subsection{Cherenkov Radiation}
 \vspace{1em}
 \input{Sections/theoretical-foundations/cherenkov-radiation}
@@ -159,46 +161,40 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 \input{Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex}
 
 \section{Photomultipliers}
+\label{sec:photomultipliers}
 \subsection{MCP-PMTs}
 \vspace{1em}
 \input{Sections/photomultipliers/mcp-pmts.tex}
 \subsection{SiPMs}
 \vspace{1em}
 \input{Sections/photomultipliers/sipms.tex}
-\subsection{LAPPDs {\color{red} might get cut}}
-\vspace{1em}
-\input{Sections/photomultipliers/lappds.tex}
-\subsection{HRPPDs {\color{red} might get cut}}
-
-\section{Photon Optics {\color{red} might get cut}}
-\subsection{Lenses \& Reflections}
-\subsection{Laser Calibration}
-
-
-\section{Ring Imaging Cherenkov Detectors (RICH)}
+\section{Ring Imaging Cherenkov Detectors}
 \vspace{1em}
 \input{Sections/rich.tex}
 %Proximity Focusing RICH at ePIC
 %ALICE at the LHC
 %Belle II at SuperKEKB
 
-\section{Detection of Internally Reflected Cherenkov Light (DIRC)}
+\section{Detection of Internally Reflected Cherenkov Light}
+\vspace{1em}
+
+\input{Sections/dirc.tex}
 %BaBar DIRC at SLAC
 %hpDIRC at ePIC
 %PANDA DIRC at FAIR
 
 \section{Neutrino Identification with Cherenkov Detectors {\color{red} might get cut}}
-\subsection{Atmospheric Muons}
-\subsection{Water Cherenkov Detectors}
-%IceCube Neutrino Observatory
-%ANNIE FermiLab
+\vspace{1em}
+\input{Sections/neutrino-identification.tex}
 
 \section{Applications at Future Facilities}
+\label{sec:applications-future-facilities}
 \subsection{PANDA DIRC at FAIR}
 \subsection{hpDIRC at ePIC Brookhaven}
 \subsection{Other Proposed Far Future Detectors {\color{red} might get cut}}
 
 \section{Current Challenges \& Limitations}
+\label{sec:current-challenges}
 \subsection{ML PID}
 \vspace{1em}
 \input{Sections/current-challenges/ml-pid.tex}
@@ -206,10 +202,6 @@ Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA 
 \subsection{Radiation Damage}
 \subsection{Budget Constraints}
 
-\section{Emerging Technologies}
-\subsection{HRPPDs}
-\subsection{Advanced Optics}
-\subsection{New Materials}
 
 \section{Summary}
 
