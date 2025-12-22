@@ -3,18 +3,36 @@
 
 \label{sec:statistical-event-reconstruction-methods}
 
-The problem of event reconstruction is to determine what happened inside the
-detector based on the data obtained from the photo-sensors. The most common 
+The problem of event reconstruction in modern Cherenkov detectors is to determine what happened inside the
+detector based on the data obtained from the photon sensors. The most common 
 current way of doing this is as a reverse ray-tracing problem. An algorithm
 iterates through the possible paths a photon can take through the detector,
 and evaluates a Gaussian likelihood under the hypothesis of each particle type \cite{Santelj_2017}.
-
-{\textcolor{red}{i want to put something about our time imaging algorithm here... help me roman! :D}}
+This likelihood is built from the spatial and temporal residuals between the
+detected photon hits and the expected photon hits from the ray-tracing. For example, a Gaussian timing
+likelihood can be expressed as:
+\begin{equation}
+    \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -\frac{(t_i - t_{i,h}^{\text{exp}})^2}{2 \sigma^2} \right)
+\end{equation}
+where \(t_i\) is the detected time of the \(i\)-th photon, \(t_{i,h}^{\text{exp}}\) is the expected time
+of the \(i\)-th photon under hypothesis \(h\), and \(\sigma\) is the timing resolution of the detector system.
+The hypothesis \(h\) can be for example a pion or a kaon. Note that many algorithms choose to use non-Gaussian likelihoods. 
+By calculating the likelihood for each hypothesis, we can then form a log-likelihood ratio to determine which 
+hypothesis is more probable:
+\begin{equation}
+    \Delta \log \mathcal{L} = \log \mathcal{L_{\text{kaon}} - \log \mathcal{L}_{\text{pion}}}
+\end{equation}
+This can be minimised across all detector hits to find the most probable particle type using various
+numerical methods. Variations on this spatial method include time-imaging \cite{time-imaging-roman_2020},
+where the spatial information is largely ignored and instead the timing information is used to build probability density functions (PDFs)
+for each particle hypothesis. The detected photon times are then compared to these PDFs to form the likelihoods. Modern algorithms
+use a combination of spatial, temporal, and even angular information from other sub-detectors to build more robust likelihood functions.
 
 In general, likelihood methods serve many detector assemblies well. However, they are in essence
-a brute-force method, and as such plagued by the usual computation limitations.
+a brute-force method, held back by computation limitations.
 One potential new-age solution is the use of machine learning. This aims to skip 
 all of the setup and calculations surrounding the likelihood methods, and rather 
-let a neural network learn how the detector reacts to certain particles. This has 
+let a neural network learn how the detector reacts to certain particles, implicitly encoding all of 
+the likelihood-like reasoning. This has 
 already seen encouraging results on Geant4 simulated data for the Hyper-Kaminokande
-experiment \cite{Prouse_2023}.
+experiment \cite{Prouse_2023} and for the PANDA Barrel DIRC \cite{film-networks-markhoff_2026}.

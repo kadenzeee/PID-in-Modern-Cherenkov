@@ -3,34 +3,63 @@
 
 \label{sec:neutrino-identification}
 
-\subsection{Water Cherenkov Detectors}
+While Cherenkov detectors can not directly detect neutrinos as they are neutral particles,
+neutrino events involving charged particles can be detected and reconstructed. However,
+since these interactions are rare and large in scale, the detector and radiator material must span 
+an enormous volume. The simple solution to this is to use easy or natural materials such as water or ice. This
+presents a unique set of engineering challenges, such as waterproofing the detectors and synchronising timing
+across large distances. It is also very difficult to separate the weakly interacting neutrino events from other
+background. Different collaborations have taken unique approaches to these problems depending on their 
+physics programmes.
+
+\subsection{Water Cherenkov Detectors (Super-K)}
+Water Cherenkov Detectors (WCDs) use large volumes of ultra-pure water as the radiator material. The Super-Kamiokande (Super-K)
+experiment in Japan \ref{fig:super-k} is a famous example of a WCD, using 50,000 tons of water surrounded by over 11,000 PMTs,
+buried under a kilometre of mountain to shield from natural radiation. The detector is used to study neutrinos at MeV-GeV 
+energies from various sources, including the sun, atmosphere, supernovae, allowing us to study neutrino-specific phenomena \cite{super-k-neutrino-osc_1998},
+which before Super-K were largely unexplored.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{Images/super-k.jpg}
-\caption{\textbf{\textcolor{red}{figure for §\ref{sec:neutrino-identification}}} (Photo: Kamioka Observatory, ICRR (Institute for Cosmic Ray Research), The University of Tokyo)}\label{fig:super-k}
+\caption{\textbf{Inside the cylindrical water tank of Super-K.} Boats are used for the maintenance 
+of water photodetectors. The detector is designed to identify neutrinos with MeV to GeV energies. 
+(Photo: Kamioka Observatory, ICRR (Institute for Cosmic Ray Research), The University of Tokyo)}\label{fig:super-k}
 \end{figure}
 
-\subsection{Atmospheric Muons}
+Super-K is squarely a precision detector for low energy neutrino physics. If we wish to study higher energy phenomena, such as 
+cosmic neutrinos in the TeV-PeV range, we need to significantly increase the scale of the detector.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\linewidth]{Images/cosmic-rays.png}
-\caption{\textbf{\textcolor{red}{figure for §\ref{sec:neutrino-identification}}} (Photo: Marzena Lapka, CERN)}\label{fig:cosmic-rays}
-\end{figure}
+\subsection{Cosmogenic Neutrinos}
 
-\subsection{Cosmic Neutrinos}
+The IceCube Neutrino Observatory is a cubic kilometre scale Cherenkov detector buried deep in the Antarctic ice sheet. 
+It uses over 5,000 photodetector modules arranged on 86 strings, deployed between 1.5 and 2.5 km deep. The detector is 
+designed to identify high energy neutrinos from astrophysical sources. These neutrinos are filtered from low energy neutrinos
+and other background by using the entire Earth as a shield; events that come from the core of the Earth are almost certainly high energy
+neutrinos, as other particles would be absorbed. 
 
-IceCube Neutrino Observatory, use Earth as a filter to identify neutrinos from cosmic rays.
+Fig \ref{fig:cosmic-neutrinos} depicts high energy cosmic neutrinos being formed through the Greisen–Zatsepin–Kuzmin (GZK)
+process, where ultra high energy (>8 \textit{joules}) cosmic rays, accelerated by natural sources like black holes, interact with the cosmic 
+microwave background radiation to produce pions, which then decay into neutrinos.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{Images/cosmic-neutrinos.png}
-\caption{\textbf{\textcolor{red}{figure for §\ref{sec:neutrino-identification}}} (Photo: Francis Halzen \cite{iceCUBE-Halzen_2025})}\label{fig:cosmic-neutrinos}
+\caption{\textbf{Cosmic neutrinos formed through the GZK process.} Protons accelerated by black holes are able to 
+interact with the cosmic background, decaying through intermediary steps into various high energy neutrinos. 
+(Photo: Francis Halzen \cite{iceCUBE-Halzen_2025})}\label{fig:cosmic-neutrinos}
 \end{figure}
+
+Fig \ref{fig:ice-cube-event-display} shows such a cosmic event from IceCube, where a high energy neutrino has interacted with the ice
+to produce muons and subsequent Cherenkov radiation. The figure is to give a sense of the scale of the detectors and the event topologies involved.
+The thickness of the strings represents photon intensity, while the colours represent timing information, red being at the beginning of an event
+and green/blue being later in time.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{Images/ice-cube-event-display.png}
 \caption{\textbf{\textcolor{red}{figure for §\ref{sec:neutrino-identification}}} (Photo: Francis Halzen \cite{iceCUBE-Halzen_2025})}\label{fig:ice-cube-event-display}
 \end{figure}
+
+Cherenkov detectors have proven to be invaluable tools in the current study of physics, but they also have a promising future. We will now look 
+at some case studies of upcoming detectors.

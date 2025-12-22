@@ -1,0 +1,214 @@
+%-----------------------------
+% Packages
+% ----------------------------
+
+% -------------------
+% Text Packages
+% -------------------
+
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+
+\usepackage{lineno}
+\usepackage[hidelinks]{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgbonum}
+\usepackage{ragged2e}
+\usepackage[svgnames,table,xcdraw]{xcolor}
+\usepackage{lipsum}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage[version=4]{mhchem}
+\usepackage{cuted}
+
+% -------------------
+% Figure Packages
+% -------------------
+
+\usepackage{graphicx} % Required for including pictures
+\usepackage{subfigure}
+\usepackage{wrapfig} % Allows in-line images
+\usepackage[hypcap=false]{caption}
+\usepackage{amsmath}
+\usepackage[thinc]{esdiff}
+\graphicspath{ {./images/} }
+\usepackage{calc} % To reset the counter in the document after the title page
+\usepackage{enumitem} % Includes lists
+\newenvironment{Figure}
+    {\par\medskip\noindent\minipage{\linewidth}}
+    {\endminipage\par\medskip}
+\usepackage{diagbox}
+
+\usepackage{tikz}
+\usepackage{tabularray}
+\usepackage{array}
+
+%-----------------------
+% Set PDF Information
+%-----------------------
+
+\hypersetup{ 	
+pdfsubject = {Year Abroad Level 11},
+pdftitle = {Literature Review},
+pdfauthor = {Daniel Markhoff}
+}
+
+
+% ---------------------
+%
+% Begin
+%
+% ---------------------
+
+
+
+\def\pmbanner{{\hrule height 1 pt}\vskip35pt{Literature Review}\vskip35pt{\hrule height 4pt}\vskip20pt}
+
+\begin{document}
+
+\begin{frontmatter}
+
+
+
+    \title{\pmbanner Particle Identification in Modern Cherenkov Detectors}
+    
+    \author{Danny Markhoff}
+    \ead{d.markhoff@sms.ed.ac.uk, d.markhoff@gsi.de}
+
+    %\affil[1]{\footnotesize School of Physics and Astronomy, University of Edinburgh, Mayfield Road, Edinburgh EH9 3FD, United Kingdom}
+    %\affil[2]{\footnotesize GSI/FAIR, Planckstrasse 1, 64291 Darmstadt, Germany}
+
+    \affiliation[1]{organization={University of Edinburgh}, 
+                addressline={School of Physics and Astronomy, Mayfield Road},
+                postcode={EH9 3FD}, 
+                city={Edinburgh}, 
+                country={United Kingdom}}
+
+    \affiliation[2]{organization={GSI}, 
+                addressline={Planckstrasse 1},
+                postcode={64291}, 
+                city={Darmstadt}, 
+                country={Germany}}
+
+\begin{abstract}
+With major detector assemblies lining up for construction at high-energy facilities such as EIC and FAIR, 
+technologies for particle identification are becoming ever more relevant. This review motivates the theory
+of the field, introduces the technologies behind modern Cherenkov detectors, and discusses the implementation 
+of these detectors into upcoming experiments.
+Emphasis is placed on ......
+Persistent challenges include ......
+We conclude by outlining promising future developments for ......
+\end{abstract}
+
+\begin{keyword}
+Particle Identification \sep Cherenkov Detectors \sep DIRC \sep RICH \sep PANDA \sep EIC \sep GSI
+\end{keyword}
+
+\end{frontmatter}
+
+\begin{strip}
+\vspace{-5em}
+  \begin{flushright}
+    \includegraphics[height=1.5cm]{Images/FAIR_Logo_cmyk.pdf}\hspace{1cm}%
+    \includegraphics[height=1.5cm]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg}
+  \end{flushright}
+
+  \textit{For PwYA Literature Review} \hfill 9th January 2026
+
+  \vspace{1em}
+
+  Placement Supervisor: Dr. Jochen Schwiening \hfill j.schwiening@gsi.de
+
+  Edinburgh Advisor: Dr. Moritz Pascal Reiter \hfill mreiter@ed.ac.uk
+
+\end{strip}
+
+
+
+
+\newpage
+\twocolumn[{
+  \begin{center}
+    \vspace{1em}
+    \tableofcontents
+    \vspace{1em}
+  \end{center}
+}]
+
+\clearpage
+\section{Introduction}
+\label{sec:intro}
+\input{Sections/introduction.tex}
+\section{Theoretical Foundations}
+\label{sec:theoretical-foundations}
+\subsection{Cherenkov Radiation}
+\vspace{1em}
+\input{Sections/theoretical-foundations/cherenkov-radiation}
+
+\subsection{Relativistic Kinematics}
+\vspace{1em}
+\input{Sections/theoretical-foundations/relativistic-kinematics}
+\subsection{Optical Detector Theory}
+\vspace{1em}
+\input{Sections/theoretical-foundations/optical-detector-theory.tex}
+\subsection{Particle Physics Motivation}
+\vspace{1em}
+\input{Sections/theoretical-foundations/particle-physics-motivation.tex}
+\subsection{Statistical Event Reconstruction Methods}
+\vspace{1em}
+\input{Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex}
+
+\section{Photomultipliers}
+\label{sec:photomultipliers}
+\subsection{MCP-PMTs}
+\vspace{1em}
+\input{Sections/photomultipliers/mcp-pmts.tex}
+\subsection{SiPMs}
+\vspace{1em}
+\input{Sections/photomultipliers/sipms.tex}
+\section{Ring Imaging Cherenkov Detectors}
+\vspace{1em}
+\input{Sections/rich.tex}
+%Proximity Focusing RICH at ePIC
+%ALICE at the LHC
+%Belle II at SuperKEKB
+
+\section{Detection of Internally Reflected Cherenkov Light}
+\vspace{1em}
+
+\input{Sections/dirc.tex}
+%BaBar DIRC at SLAC
+%hpDIRC at ePIC
+%PANDA DIRC at FAIR
+
+\section{Neutrino Identification with Cherenkov Detectors {\color{red} might get cut}}
+\vspace{1em}
+\input{Sections/neutrino-identification.tex}
+
+\section{Applications at Future Facilities}
+\label{sec:applications-future-facilities}
+\subsection{PANDA DIRC at FAIR}
+\subsection{hpDIRC at ePIC Brookhaven}
+\subsection{Other Proposed Far Future Detectors {\color{red} might get cut}}
+
+\section{Current Challenges \& Limitations}
+\label{sec:current-challenges}
+\subsection{ML PID}
+\vspace{1em}
+\input{Sections/current-challenges/ml-pid.tex}
+\subsection{High Rate Environments}
+\subsection{Radiation Damage}
+\subsection{Budget Constraints}
+
+
+\section{Summary}
+
+\cite{Singh_2019}
+
+
+\bibliographystyle{ieeetr-modified} 
+\bibliography{bibliography}
+
+    \end{document}

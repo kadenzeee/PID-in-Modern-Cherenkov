@@ -21,36 +21,34 @@ hit on the photocathode. MCP-PMTs are used in an incredible range of fields,
 from blood tests, to spectroscopy, to radar jamming. (Photo: \cite{photonics12010046})}\label{fig:traditional-mcp-pmt}
 \end{figure}
 
-In detector physics we are interested in a few properties of MCP-PMTs. 
-\begin{itemize}
-\item Firstly,
+In detector physics we are interested in a few properties of MCP-PMTs. Firstly,
 the quantum efficiency (QE) of the photocathode is the probability of an incident photon
 producing a photoelectron. Around 20\% are typical for modern MCP-PMTs. The requirements
 for the PANDA Barrel DIRC ask for a QE of 18\% between 300 - 400nm \cite{panda-mcps-Katje_2025}. 
-\item Secondly, the consistency of accurate hits is of great interest. We want uniform gain
+
+Secondly, the consistency of accurate hits is of great interest. We want uniform gain
 across the entire MCP-PMT, and we do not want secondary electron emissions that cause faulty
 signals. The former is referred to as the gain behaviour, or gain uniformity. The latter, where
 we have erroneous secondary electron signals are called dark counts or afterpulsing depending 
 on the cause. These are signals that are counted as a hit, but do not actually represent an
 incident Cherenkov photon.
-\item Timing characteristics are also very important. The time resolution of the MCP-PMT is
-often measured with the entire data acquisition system (DAQ) included, and modern photodetectors
-are pushing 100ps time resolution. This is a measure of how quickly a hit is detected after a 
-laser pulse directly on the detector. A lower timing resolution allows us to be more precise with
+
+Timing characteristics are also very important. The timing resolution of the MCP-PMT refers to the 
+uncertainty when the detector reports a single photon hit. Modern MCP-PMTs
+are pushing 15ps time resolution \cite{Lyashenko_2026}. A lower timing resolution allows us to be more precise with
 event reconstruction. The timing resolution is also somewhat inversely correlated to the rate 
 capability of the detector; this is a measure of how many incident photons the MCP-PMT can handle
-before becoming too saturated and DAQ not being able to distinguish clear hits. The PANDA Barrel 
+before becoming too saturated and therefore not being able to distinguish clear hits. The PANDA Barrel 
 asks for a photoelectron rate capability of 500 \(\text{kHz/cm}^2\) \cite{panda-mcps-Katje_2025}.
 
-\item Lastly, the lifetime of the MCP-PMT is of interest. If we are building detectors with price 
+Lastly, the lifetime of the MCP-PMT is of interest. If we are building detectors with price 
 tags north of €100 million EUR, we want to make sure they last a good while. The main factors affecting 
 MCP-PMT lifetime include overall exposure to photons, radiation damage and heat degradation/weathering. 
 Minimising dark count rates and afterpulses is also crucial for MCP-PMT lifetime, as these add exposure 
 and send electrons to places where they can cause chemical degradation.
-\end{itemize}
 
 MCP-PMT development is easily an entire thesis topic, so we will refrain from 
-indulging here. However, it should be emphasised that this is a topic that is 
+indulging more. However, it should be emphasised that this is a topic that is 
 central to particle identification and detector physics; without MCP-PMTs, 
 Cherenkov detectors are impossible.
 
