@@ -44,7 +44,18 @@
 \begin{document}
 
 
-\title{\includegraphics[height=1.5cm]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg}\hspace{1cm}\includegraphics[height=1.5cm]{Images/FAIR_Logo_cmyk.pdf} \\
+
+\begin{figure}[!htb]\centering
+   \begin{minipage}{0.48\textwidth}
+     \includegraphics[width=.7\linewidth]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg}
+   \end{minipage}
+   \begin{minipage}{0.48\textwidth}
+     \includegraphics[width=.7\linewidth]{Images/GSI_Logo_rgb.png}
+   \end{minipage}
+\end{figure}
+
+
+\title{
 Physics with Year Abroad, Literature Review:\\
 Particle Identification in Modern Cherenkov Detectors}% Force line breaks with \\
 
@@ -62,42 +73,42 @@ With major detector assemblies lining up for construction at high-energy facilit
 technologies for particle identification are becoming ever more relevant. This review motivates the theory
 of the field, introduces the technologies behind modern Cherenkov detectors, and discusses the implementation 
 of these detectors into upcoming experiments.
-Emphasis is placed on 
-Persistent challenges include ......
-We conclude by outlining promising future developments for ......
+Emphasis is placed on event reconstruction techniques and the challenges presented by cutting-edge physics programmes.
+Persistent challenges include \ldots
+We conclude by outlining promising future developments for Cherenkov detectors.
 \end{abstract}
 
 \maketitle
 
 \tableofcontents
 
-\section{\label{sec:level1}Introduction}
+\section{\label{sec:intro}Introduction}
 
 \input{Sections/introduction.tex}
 
-\section{Theoretical Foundations}
-\label{sec:theoretical-foundations}
-\subsection{Cherenkov Radiation}
+\section{\label{sec:theoretical-foundations}Theoretical Foundations}
+
+\subsection{\label{sec:cherenkov-radiation}Cherenkov Radiation}
 \vspace{1em}
 \input{Sections/theoretical-foundations/cherenkov-radiation}
 
-\subsection{Relativistic Kinematics}
+\subsection{\label{sec:relativistic-kinematics}Relativistic Kinematics}
 \vspace{1em}
 \input{Sections/theoretical-foundations/relativistic-kinematics}
-\subsection{Optical and Imaging Theory}
+\subsection{\label{sec:optical-detector-theory}Optical and Imaging Theory}
 \vspace{1em}
 \input{Sections/theoretical-foundations/optical-detector-theory.tex}
-\subsection{Particle Physics Motivation}
+\subsection{\label{sec:particle-physics-motivation}Particle Physics Motivation}
 \vspace{1em}
 \input{Sections/theoretical-foundations/particle-physics-motivation.tex}
-\subsection{Statistical and Algorithmic Foundations of Event Reconstruction}
+\subsection{\label{sec:statistical-event-reconstruction-methods}Statistical and Algorithmic Foundations of Event Reconstruction}
 \vspace{1em}
 \input{Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex}
 
 
-\section{Photon Detection Technologies}
-\label{sec:photomultipliers}
-\subsection{MCP-PMTs}
+\section{\label{sec:photomultipliers}Photon Detection Technologies}
+
+\subsection{\label{sec:mcp-pmts}MCP-PMTs}
 \vspace{1em}
 \input{Sections/photomultipliers/mcp-pmts.tex}
 \subsection{SiPMs}
@@ -111,51 +122,39 @@ We conclude by outlining promising future developments for ......
 
 \subsection{\label{sec:rich}RICH}
 \input{Sections/rich.tex}
-%Proximity Focusing RICH at ePIC
-%ALICE at the LHC
-%Belle II at SuperKEKB
+
 
 \subsection{\label{sec:dirc}DIRC}
 \vspace{1em}
-
 \input{Sections/dirc.tex}
-%BaBar DIRC at SLAC
-%hpDIRC at ePIC
-%PANDA DIRC at FAIR
 
-\section{Neutrino Identification with Cherenkov Detectors}
+
+\section{\label{sec:neutrino-identification}Neutrino Identification with Cherenkov Detectors}
 \vspace{1em}
 \input{Sections/neutrino-identification.tex}
 
-\section{Applications at Future Facilities}
-\label{sec:applications-future-facilities}
+\section{\label{sec:applications-future-facilities}Applications at Future Facilities}
+
 \subsection{PANDA DIRC at FAIR}
 \subsection{hpDIRC at ePIC Brookhaven}
 \subsection{Other Proposed Far Future Detectors}
 {\color{red} might get cut}
 
-\section{Current Challenges \& Limitations}
-\label{sec:current-challenges}
-\subsection{Machine Learning for PID}
+\section{\label{sec:current-challenges}Current Challenges \& Limitations}
+
 \vspace{1em}
-\input{Sections/current-challenges/ml-pid.tex}
-\subsection{High-Rate Environments}
-\subsection{Radiation Damage}
-\subsection{Budget Constraints}
+\input{Sections/current-challenges.tex}
+%\subsection{High-Rate Environments}
+%\subsection{Radiation Damage}
+%\subsection{Budget Constraints}
 
 
 \section{Conclusion}
 
-\section{References}s
+\section{References}
 \bibliographystyle{ieeetr-modified}
 \bibliography{bibliography}% Produces the bibliography via BibTeX.
 
-
-\begin{acknowledgments}
-Given that this is a report intended for marking as part of your assessment structure, you will typically not have co-authors, however you may wish to acknowledge the support of others who helped and contributed to your report in this section. 
-
-\dots.
-\end{acknowledgments}
 
 
 \end{document}

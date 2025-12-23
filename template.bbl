@@ -2,7 +2,7 @@
 \def\mn@doi[#1]#2{\def\@tempa{#1}\ifx\@tempa\@empty \href{http://dx.doi.org/#2}{#2}\else \href{http://dx.doi.org/#2}{#1}\fi}
 
 \bibitem{Cherenkov_1937}
-P.~A. \ifmmode~\check{C}\else \v{C}\fi{}erenkov, ``{Visible Radiation Produced by Electrons Moving in a Medium with Velocities Exceeding that of Light},'' {\em \mn@doi[Phys. Rev.]{10.1103/PhysRev.52.378}}, vol.~52, pp.~378--379, Aug 1937.
+P.~A. Cherenkov, ``{Visible Radiation Produced by Electrons Moving in a Medium with Velocities Exceeding that of Light},'' {\em \mn@doi[Phys. Rev.]{10.1103/PhysRev.52.378}}, vol.~52, pp.~378--379, Aug 1937.
 
 \bibitem{Frank_1937}
 I.~M. Frank and I.~E. Tamm, ``{Coherent visible radiation of fast electrons passing through matter},'' {\em \mn@doi[Compt. Rend. Acad. Sci. URSS]{10.3367/UFNr.0093.196710o.0388}}, vol.~14, no.~3, pp.~109--114, 1937.
@@ -69,14 +69,17 @@ B.~Page, ``{A Proximity Focusing RICH Detector for the ePIC Experiment at the EI
 \newblock \href{https://indico.gsi.de/event/20387/timetable/#69-a-proximity-focusing-rich-d}{XII International Workshop on Ring Imaging Cherenkov Detectors, Mainz, Germany}.
 
 \bibitem{fused-silica-smooth-TAN2023}
-Z.~Tan, X.~Jiang, Y.~Mao, X.~Long, and H.~Luo, ``Ultra-smooth surface with 0.4 Å roughness on fused silica,'' {\em \mn@doi[Ceramics International]{https://doi.org/10.1016/j.ceramint.2022.08.022}}, vol.~49, no.~5, pp.~7245--7251, 2023.
+``{Ultra-smooth surface with 0.4 Å roughness on fused silica},''
 
 \bibitem{radiation-hardness-silica-HOEK2008190}
-M.~Hoek, E.~Bennet, D.~Branford, E.~Cowie, M.~Düren, K.~Föhl, D.~Glazier {\em et~al.}, ``Radiation hardness study on fused silica,'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2008.07.098}}, vol.~595, no.~1, pp.~190--193, 2008.
+M.~Hoek, E.~Bennet, D.~Branford, E.~Cowie, M.~Düren, K.~Föhl, D.~Glazier {\em et~al.}, ``{Radiation hardness study on fused silica},'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2008.07.098}}, vol.~595, no.~1, pp.~190--193, 2008.
 \newblock RICH 2007.
 
 \bibitem{electronics-readout-KEIZER2024169664}
-F.~Keizer, ``The fastrich asic for the lhcb rich enhancements,'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2024.169664}}, vol.~1067, p.~169664, 2024.
+F.~Keizer, ``{The FastRICH ASIC for the LHCb RICH enhancements},'' {\em \mn@doi[Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment]{https://doi.org/10.1016/j.nima.2024.169664}}, vol.~1067, p.~169664, 2024.
+
+\bibitem{Fanelli_2025}
+C.~Fanelli, J.~Giroux, and J.~Stevens, ``{Deep(er) reconstruction of imaging Cherenkov detectors with swin transformers and normalizing flow models},'' {\em \mn@doi[Machine Learning: Science and Technology]{10.1088/2632-2153/ada8f4}}, vol.~6, p.~015028, feb 2025.
 
 \bibitem{super-k-neutrino-osc_1998}
 Y.~Fukuda, T.~Hayakawa, E.~Ichihara, K.~Inoue, K.~Ishihara, H.~Ishino, Y.~Itow {\em et~al.}, ``{Evidence for Oscillation of Atmospheric Neutrinos},'' {\em \mn@doi[Phys. Rev. Lett.]{https://doi.org/10.1103/PhysRevLett.81.1562}}, vol.~81, pp.~1562--1567, Aug 1998.
@@ -84,8 +87,5 @@ Y.~Fukuda, T.~Hayakawa, E.~Ichihara, K.~Inoue, K.~Ishihara, H.~Ishino, Y.~Itow {
 \bibitem{iceCUBE-Halzen_2025}
 F.~Halzen, ``{Antarctic Ice and Ocean Water as Cherenkov Neutrino Detectors}.'' Conference Session, 2025.
 \newblock \href{https://indico.gsi.de/event/20387/timetable/#21-antarctic-ice-and-ocean-wat}{XII International Workshop on Ring Imaging Cherenkov Detectors, Mainz, Germany}.
-
-\bibitem{Fanelli_2025}
-C.~Fanelli, J.~Giroux, and J.~Stevens, ``{Deep(er) reconstruction of imaging Cherenkov detectors with swin transformers and normalizing flow models},'' {\em \mn@doi[Machine Learning: Science and Technology]{10.1088/2632-2153/ada8f4}}, vol.~6, p.~015028, feb 2025.
 
 \end{thebibliography}

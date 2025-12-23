@@ -1,0 +1,34 @@
+\contentsline {title}{ Physics with Year Abroad, Literature Review:\\ Particle Identification in Modern Cherenkov Detectors}{1}{section*.2}%
+\contentsline {abstract}{Abstract}{1}{section*.1}%
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.3}%
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{1}{section*.4}%
+\contentsline {section}{\numberline {II}Theoretical Foundations}{2}{section*.5}%
+\contentsline {subsection}{\numberline {II.A}Cherenkov Radiation}{2}{section*.6}%
+\contentsline {subsection}{\numberline {II.B}Relativistic Kinematics}{2}{section*.7}%
+\contentsline {subsection}{\numberline {II.C}Optical and Imaging Theory}{3}{section*.8}%
+\contentsline {subsection}{\numberline {II.D}Particle Physics Motivation}{3}{section*.9}%
+\contentsline {subsection}{\numberline {II.E}Statistical and Algorithmic Foundations of Event Reconstruction}{4}{section*.10}%
+\contentsline {section}{\numberline {III}Photon Detection Technologies}{4}{section*.11}%
+\contentsline {subsection}{\numberline {III.A}MCP-PMTs}{4}{section*.12}%
+\contentsline {subsection}{\numberline {III.B}SiPMs}{5}{section*.13}%
+\contentsline {section}{\numberline {IV}Cherenkov Imaging Detectors}{5}{section*.14}%
+\contentsline {subsection}{\numberline {IV.A}RICH}{5}{section*.15}%
+\contentsline {subsubsection}{\numberline {IV.A.1}Radiators}{5}{section*.16}%
+\contentsline {subsubsection}{\numberline {IV.A.2}Optics}{6}{section*.17}%
+\contentsline {subsubsection}{\numberline {IV.A.3}Mechanics \& Integration}{6}{section*.18}%
+\contentsline {subsection}{\numberline {IV.B}DIRC}{6}{section*.19}%
+\contentsline {subsubsection}{\numberline {IV.B.1}Photon Transport via Internal Reflection}{6}{section*.20}%
+\contentsline {subsubsection}{\numberline {IV.B.2}Chromatic Effects \& Timing Resolution}{7}{section*.21}%
+\contentsline {subsubsection}{\numberline {IV.B.3}Reconstruction Methods \& PID}{7}{section*.22}%
+\contentsline {section}{\numberline {V}Neutrino Identification with Cherenkov Detectors}{7}{section*.23}%
+\contentsline {subsection}{\numberline {V.A}Water Cherenkov Detectors (Super-K)}{7}{section*.24}%
+\contentsline {subsection}{\numberline {V.B}Cosmogenic Neutrinos}{7}{section*.25}%
+\contentsline {section}{\numberline {VI}Applications at Future Facilities}{8}{section*.26}%
+\contentsline {subsection}{\numberline {VI.A}PANDA DIRC at FAIR}{8}{section*.27}%
+\contentsline {subsection}{\numberline {VI.B}hpDIRC at ePIC Brookhaven}{8}{section*.28}%
+\contentsline {subsection}{\numberline {VI.C}Other Proposed Far Future Detectors}{8}{section*.29}%
+\contentsline {section}{\numberline {VII}Current Challenges \& Limitations}{8}{section*.30}%
+\contentsline {section}{\numberline {VIII}Conclusion}{8}{section*.31}%
+\contentsline {section}{\numberline {IX}References}{8}{section*.32}%

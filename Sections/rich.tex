@@ -1,11 +1,9 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/rich.tex
 % Content for the "Ring Imaging Cherenkov Detectors (RICH)" subsection
 
-\label{sec:rich}
-
 Ring Imaging Cherenkov Detectors (RICH) are a class of Cherenkov detectors that use a radiator
 at a known distance from a photodetector array to measure the Cherenkov angle of incident
-particles. Shown in Fig \ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH
+particles. Shown in Fig \nolinebreak\ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH
 detector. 
 
 \begin{figure}[h]
@@ -28,11 +26,11 @@ to minimise chromatic dispersion and to maintain angular resolution.
 \subsubsection{Radiators}
 
 Different RICH experiments use different radiator materials. Common choices include aerogel
-such as in the Belle II ARICH \cite{abe2010belleiitechnicaldesign}, gaseous radiators such as in
-the old LHCb RICH \cite{LHCbRICH2000technicaldesign} and (although in mostly retired detectors) 
-liquids such as in the barrel CRID at SLAC \cite{barrelCRID1999SLACtechnicalreport}.
+such as in the Belle II ARICH \nolinebreak\cite{abe2010belleiitechnicaldesign}, gaseous radiators such as in
+the old LHCb RICH \nolinebreak\cite{LHCbRICH2000technicaldesign} and (although in mostly retired detectors) 
+liquids such as in the barrel CRID at SLAC \nolinebreak\cite{barrelCRID1999SLACtechnicalreport}.
 
-Consider the Cherenkov angle condition from Eq \ref{equ:cherenkov-critical-angle}. The radiator
+Consider the Cherenkov angle condition from Eq \nolinebreak\ref{equ:cherenkov-critical-angle}. The radiator
 refractive index \(n\) is the key parameter that determines the choice of radiator, depending on 
 expected beam momenta. Higher refractive indices are necessary for lower momentum particles, which
 is why we see older accelerator systems using liquid radiators with inherently higher refractive indices.
@@ -40,8 +38,8 @@ is why we see older accelerator systems using liquid radiators with inherently h
 The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an
 important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The
 refractive index also affects the number of Cherenkov photons produced, as per the Frank-Tamm formula in 
-Eq \ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon
-yield, such as layering aerogel with different refractive indices without performance cost \cite{IIJIMA2005383}. 
+Eq \nolinebreak\ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon
+yield, such as layering aerogel with different refractive indices without performance cost \nolinebreak\cite{IIJIMA2005383}. 
 Naturally though complexity comes at a cost, especially in the case of finely engineered components such as
 Cherenkov radiators.
 
@@ -53,7 +51,7 @@ escape the detector. Other optical tricks such as the aforementioned layered rad
 used to tighten the spread of the photon cone, allowing lower momentum charged particles to be measured. 
 
 As an applied example, the pfRICH at the forward section of the ePIC detector makes use of conical mirrors to increase 
-the acceptance angle of particle tracks which can be seen in Fig \ref{fig:pfrich-conical-mirrors}. More photons means
+the acceptance angle of particle tracks which can be seen in Fig \nolinebreak\ref{fig:pfrich-conical-mirrors}. More photons means
 better angular resolution and therefore improved event reconstruction.
 
 \begin{figure}[h]

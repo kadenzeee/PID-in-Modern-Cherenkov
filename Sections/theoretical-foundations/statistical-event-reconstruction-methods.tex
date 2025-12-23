@@ -1,18 +1,16 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex
 % Content for the "Statistical Event Reconstruction Methods" subsection
 
-\label{sec:statistical-event-reconstruction-methods}
-
 The problem of event reconstruction in modern Cherenkov detectors is to determine what happened inside the
 detector based on the data obtained from the photon sensors. The most common 
 current way of doing this is as a reverse ray-tracing problem. An algorithm
 iterates through the possible paths a photon can take through the detector,
-and evaluates a Gaussian likelihood under the hypothesis of each particle type \cite{Santelj_2017}.
+and evaluates a Gaussian likelihood under the hypothesis of each particle type \nolinebreak\cite{Santelj_2017}.
 This likelihood is built from the spatial and temporal residuals between the
 detected photon hits and the expected photon hits from the ray-tracing. For example, a Gaussian timing
 likelihood can be expressed as:
 \begin{equation}
-    \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -\frac{(t_i - t_{i,h}^{\text{exp}})^2}{2 \sigma^2} \right)
+    \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -{\frac{( t_i - t_{i,h}^{\text{exp}})^2}{2 \sigma^2}} \right)
 \end{equation}
 where \(t_i\) is the detected time of the \(i\)-th photon, \(t_{i,h}^{\text{exp}}\) is the expected time
 of the \(i\)-th photon under hypothesis \(h\), and \(\sigma\) is the timing resolution of the detector system.
@@ -23,7 +21,7 @@ hypothesis is more probable:
     \Delta \log \mathcal{L} = \log \mathcal{L_{\text{kaon}} - \log \mathcal{L}_{\text{pion}}}
 \end{equation}
 This can be minimised across all detector hits to find the most probable particle type using various
-numerical methods. Variations on this spatial method include time-imaging \cite{time-imaging-roman_2020},
+numerical methods. Variations on this spatial method include time-imaging \nolinebreak\cite{time-imaging-roman_2020},
 where the spatial information is largely ignored and instead the timing information is used to build probability density functions (PDFs)
 for each particle hypothesis. The detected photon times are then compared to these PDFs to form the likelihoods. Modern algorithms
 use a combination of spatial, temporal, and even angular information from other sub-detectors to build more robust likelihood functions.
@@ -35,4 +33,4 @@ all of the setup and calculations surrounding the likelihood methods, and rather
 let a neural network learn how the detector reacts to certain particles, implicitly encoding all of 
 the likelihood-like reasoning. This has 
 already seen encouraging results on Geant4 simulated data for the Hyper-Kaminokande
-experiment \cite{Prouse_2023} and for the PANDA Barrel DIRC \cite{film-networks-markhoff_2026}.
+experiment \nolinebreak\cite{Prouse_2023} and for the PANDA Barrel DIRC \nolinebreak\cite{film-networks-markhoff_2026}.

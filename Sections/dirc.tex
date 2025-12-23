@@ -1,13 +1,11 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/dirc.tex
 % Content for the "Detection of Internally Reflected Cherenkov Light" subsection
 
-\label{sec:dirc}
-
 Devices that detect internally reflected Cherenkov light are a type of Cherenkov detector, called DIRCs for short, circumvent the need 
 for a separate radiator by using solid transparent bars, typically quartz, to both generate and guide 
-Cherenkov photons to the photodetectors. Fig \ref{fig:panda-bd-event-display} already
-introduced in Section \ref{sec:optical-detector-theory} showed a Geant4 simulation of the
-PANDA Barrel DIRC detector \cite{Singh_2019}, but Fig \ref{fig:panda-dirc} shows a more
+Cherenkov photons to the photodetectors. Fig \nolinebreak\ref{fig:panda-bd-event-display} already
+introduced in Section \nolinebreak\ref{sec:optical-detector-theory} showed a Geant4 simulation of the
+PANDA Barrel DIRC detector \nolinebreak\cite{Singh_2019}, but Fig \nolinebreak\ref{fig:panda-dirc} shows a more
 detailed rendering of the barrel detector itself. 
 
 \begin{figure}[h]
@@ -22,33 +20,33 @@ particles incident on a medium with refractive index \(n>1\) emit Cherenkov phot
 and we try to measure the principle angle of this cone. However, in a DIRC detector the complexity
 arises from the optics of trapping and guiding the Cherenkov photons to a small array of photodetectors.
 
-\subsubsection{Photon Transport via Internal Reflection}
-\label{sec:internal-reflection}
+\subsubsection{\label{sec:internal-reflection}Photon Transport via Internal Reflection}
+
 
 Similarly to photon transport in optical fibres, the Cherenkov photons produced in the quartz bars of a DIRC 
-are trapped via total internal reflection as shown in Fig \ref{fig:panda-dirc}. The photons propagate to the end of the bar,
+are trapped via total internal reflection as shown in Fig \nolinebreak\ref{fig:panda-dirc}. The photons propagate to the end of the bar,
 where they are focused into an expansion volume, and then onto the photodetector array. The DIRC relies on photons internally 
 reflecting hundreds of times with minimal loss, all while preserving the Cherenkov angle precision. The fused silica bars provide 
-extremely smooth surfaces to facilitate this, with surface roughness possible on the order of angstroms \cite{fused-silica-smooth-TAN2023}.
+extremely smooth surfaces to facilitate this, with surface roughness possible on the order of angstroms \nolinebreak\cite{fused-silica-smooth-TAN2023}.
 
 The quartz bars are also UV transparent, allowing Cherenkov photons in the near-UV range to be detected, increasing the photon 
 yield of the detector. Quartz is also known to be radiation hard, which will allow the detector to operate in the high radiation
-environments of modern accelerators without significant degradation over time \cite{radiation-hardness-silica-HOEK2008190}.
+environments of modern accelerators without significant degradation over time \nolinebreak\cite{radiation-hardness-silica-HOEK2008190}.
 The fused silica bars also have a near optimal refractive index of around 1.47 in the visible spectrum, giving large Cherenkov angles.
 Lower refractive indices would reduce the angle separation, harming PID performance, while higher refractive indices would 
 increase chromatic dispersion, harming angular resolution. 
 
 
-\subsubsection{Chromatic Effects and Timing Resolution}
-\label{sec:timing-resolution}
+\subsubsection{\label{sec:timing-resolution}Chromatic Effects \& Timing Resolution}
+
 
 Since Cherenkov photons are produced across a range of wavelengths, chromatic dispersion is unavoidable. Since the quartz bars 
 are often meters long, blue photons often arrive 100s of picoseconds later than red photons. This is due to the wavelength dependence
 of the refractive index, which is around 1.50 for blue light and 1.47 for red light in quartz. However, dispersion can be corrected for
 if the photon arrival time is measured with sufficient precision, making it a crucial aspect of DIRC design. 
 
-Modern MCP-PMTs are able to achieve single photon timing resolutions on the order of 15-20ps \cite{Lyashenko_2026}. 
-Improvements in readout electronics and signal processing are also pushing timing resolutions lower \cite{electronics-readout-KEIZER2024169664}. 
+Modern MCP-PMTs are able to achieve single photon timing resolutions on the order of 15–20ps \nolinebreak\cite{Lyashenko_2026}. 
+Improvements in readout electronics and signal processing are also pushing timing resolutions lower \nolinebreak\cite{electronics-readout-KEIZER2024169664}. 
 These advancements allow photon timing to become a measurable observable, rather than just noise; detected photons provide \(x, y, t\) rather
 than just \(x, y\). We can bake this information into our event reconstruction algorithms, simulating expected photon arrival times 
 for bluer and redder photons separately, massively improving angular resolution. 
@@ -56,5 +54,27 @@ for bluer and redder photons separately, massively improving angular resolution.
 These sorts of chromatic corrections via timing information lead to far more sophisticated event reconstruction than RICH systems. As discussed in Section \ref{sec:statistical-event-reconstruction-methods},
 statistical methods such as maximum likelihood estimation are extremely powerful. DIRC systems offer a unique double-edged sword; complex photon paths, internal reflections,
 and chromatic dispersion make analytical solutions near impossible, but the extremely detailed information available from precise timing measurements allow for robust
-statistical models such as time-imaging \cite{time-imaging-roman_2020} and machine learning to shine. 
+statistical models such as time-imaging \nolinebreak\cite{time-imaging-roman_2020} and machine learning to shine. 
 
+\subsubsection{\label{sec:reconstruction-methods}Reconstruction Methods \& PID}
+
+Event reconstruction in a DIRC system is inherently more complicated than in RICH systems, due to the 
+many reflections in the path of the photons. 
+
+
+\textcolor{red}{Put lower level stuff about ml pid here, try to justify your project}
+
+Machine learning (ML) techniques are becoming increasingly prevalent in particle physics
+as the need for fast and accurate data analysis grows. As detector arrays become larger,
+so does the volume of data produced. Traditional PID methods, such as likelihood-based
+event reconstruction as discussed in §\ref{sec:statistical-event-reconstruction-methods}
+can become computationally expensive and time-consuming. ML algorithms when trained have
+the possibility to skip all of the intermediate steps and directly classify particles 
+from raw detector data. This is particularly useful in high-rate environments and is also
+applicable to non-Cherenkov detectors.
+
+The way that raw data is presented to the ML algorithm is crucial. Often we will see hit
+patterns from photodetector arrays represented as 2D images, with pixel intensities represented
+by colour scales. This makes convolutional neural networks (CNNs) a reasonable choice for ML PID,
+as CNNs are well suited to image processing tasks. Other algorithms such as dense neural networks
+(DNNs) and normalising flows \nolinebreak\cite{Fanelli_2025} are also being explored.

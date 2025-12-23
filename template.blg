@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: template.aux
+The style file: ieeetr-modified.bst
+Database file #1: templateNotes.bib
+Database file #2: bibliography.bib
+Warning--empty author in fused-silica-smooth-TAN2023
+Warning--empty journal in fused-silica-smooth-TAN2023
+Warning--empty year in fused-silica-smooth-TAN2023
+You've used 26 entries,
+            1958 wiz_defined-function locations,
+            683 strings with 35235 characters,
+and the built_in function-call counts, 6807 in all, are:
+= -- 592
+> -- 406
+< -- 0
++ -- 137
+- -- 111
+* -- 535
+:= -- 1007
+add.period$ -- 34
+call.type$ -- 26
+change.case$ -- 24
+chr.to.int$ -- 0
+cite$ -- 29
+duplicate$ -- 310
+empty$ -- 599
+format.name$ -- 111
+if$ -- 1642
+int.to.chr$ -- 0
+int.to.str$ -- 26
+missing$ -- 21
+newline$ -- 91
+num.names$ -- 24
+pop$ -- 90
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 241
+stack$ -- 0
+substring$ -- 280
+swap$ -- 132
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 48
+width$ -- 28
+write$ -- 259
+(There were 3 warnings)
