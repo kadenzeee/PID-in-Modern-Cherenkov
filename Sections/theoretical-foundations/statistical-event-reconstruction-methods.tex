@@ -10,9 +10,9 @@ This likelihood is built from the spatial and temporal residuals between the
 detected photon hits and the expected photon hits from the ray-tracing. For example, a Gaussian timing
 likelihood can be expressed as:
 \begin{equation}
-    \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -{\frac{( t_i - t_{i,h}^{\text{exp}})^2}{2 \sigma^2}} \right)
+    \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -{\frac{( t_i - \langle t_{i,h} \rangle)^2}{2 \sigma^2}} \right)
 \end{equation}
-where \(t_i\) is the detected time of the \(i\)-th photon, \(t_{i,h}^{\text{exp}}\) is the expected time
+where \(t_i\) is the detected time of the \(i\)-th photon, \(\langle t_{i,h} \rangle\) is the expected time
 of the \(i\)-th photon under hypothesis \(h\), and \(\sigma\) is the timing resolution of the detector system.
 The hypothesis \(h\) can be for example a pion or a kaon. Note that many algorithms choose to use non-Gaussian likelihoods. 
 By calculating the likelihood for each hypothesis, we can then form a log-likelihood ratio to determine which 
@@ -28,7 +28,7 @@ use a combination of spatial, temporal, and even angular information from other 
 
 In general, likelihood methods serve many detector assemblies well. However, they are in essence
 a brute-force method, held back by computation limitations.
-One potential new-age solution is the use of machine learning. This aims to skip 
+One potential new-age solution is the use of machine learning (ML). This aims to skip 
 all of the setup and calculations surrounding the likelihood methods, and rather 
 let a neural network learn how the detector reacts to certain particles, implicitly encoding all of 
 the likelihood-like reasoning. This has 

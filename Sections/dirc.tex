@@ -11,8 +11,9 @@ detailed rendering of the barrel detector itself.
 \begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{Images/panda-barrel-dirc-cross-section.png}
-\caption{\textbf{The PANDA Barrel DIRC.} 16 individual DIRC detectors are laid in a 
-barrel-like arrangement, forming the very core of the detector array}\label{fig:panda-dirc}
+\caption{\textbf{The PANDA Barrel DIRC along with an individual bar cross section.} 16 individual DIRC detectors are laid in a 
+barrel-like arrangement, forming the very core of the detector array. Photons are internally reflected through the quartz bars.
+}\label{fig:panda-dirc}
 \end{figure}
 
 The basic principle of DIRC operation is similar to that of other Cherenkov detectors; charged
@@ -51,30 +52,34 @@ These advancements allow photon timing to become a measurable observable, rather
 than just \(x, y\). We can bake this information into our event reconstruction algorithms, simulating expected photon arrival times 
 for bluer and redder photons separately, massively improving angular resolution. 
 
-These sorts of chromatic corrections via timing information lead to far more sophisticated event reconstruction than RICH systems. As discussed in Section \ref{sec:statistical-event-reconstruction-methods},
+These sorts of chromatic corrections via timing information lead to far more sophisticated event reconstruction than RICH systems. As discussed in Section \nolinebreak\ref{sec:statistical-event-reconstruction-methods},
 statistical methods such as maximum likelihood estimation are extremely powerful. DIRC systems offer a unique double-edged sword; complex photon paths, internal reflections,
 and chromatic dispersion make analytical solutions near impossible, but the extremely detailed information available from precise timing measurements allow for robust
 statistical models such as time-imaging \nolinebreak\cite{time-imaging-roman_2020} and machine learning to shine. 
 
 \subsubsection{\label{sec:reconstruction-methods}Reconstruction Methods \& PID}
 
-Event reconstruction in a DIRC system is inherently more complicated than in RICH systems, due to the 
-many reflections in the path of the photons. 
+While DIRC systems provide excellent PID performance in compact geometries, their reliance on time-based global likelihood 
+reconstruction from chromatic effects can complicate hit–track association in high-multiplicity collider environments compared to spatially imaging RICH 
+detectors. The aforementioned time-imaging reconstruction method builds up a PDF from expected photon arrival times for all 
+detector array channels and particle types. Then, events to be classified can be compared to these PDFs on a maximum likelihood basis. The algorithm 
+can be optimised using a lookup table of possible paths a photon could take to a specific channel, eliminating a few unnecessary computations. 
+This allows more flexibility in focusing optics within the detector geometry, as possible paths can be analytically determined and 
+placed in the lookup table. This improves photon yield and therefore PID performance, up to 4.8 ± 0.1 \(\sigma\) \nolinebreak\cite{time-imaging-roman_2020}.
+However, from a software standpoint, the algorithm is unfriendly to parallelise due to heavy use of conditional logic. 
+Parallel hardware prefers to perform the same operation on many different data points. This algorithm demands different operations 
+depending on detector channel, timing, and hypothesis. As such, computation time becomes a problem for large datasets. 
 
+ML on the other hand is significantly easier to parallelise. Raw detector data is fed to the network on a per-event level and a sequence of 
+fixed operations (mostly matrix multiplications) are performed. This inherently uses fewer CPU cycles per event when compared to time-imaging. The ML models are 
+also easy to distribute onto modern hardware. Also since latency is predictable per event, as it is correlated to model size, data processing
+is unlikely to `choke'; we are able to process batches of events at a time and can reliably expect all events to finish processing at 
+around the same time. This is in contrast to variable latency such as in time-imaging reconstruction, where often batches are waiting on
+one particularly difficult event to finish processing before starting the next batch. These advantages make ML scaleable in a way that 
+maximum likelihood algorithms are not. 
 
-\textcolor{red}{Put lower level stuff about ml pid here, try to justify your project}
-
-Machine learning (ML) techniques are becoming increasingly prevalent in particle physics
-as the need for fast and accurate data analysis grows. As detector arrays become larger,
-so does the volume of data produced. Traditional PID methods, such as likelihood-based
-event reconstruction as discussed in §\ref{sec:statistical-event-reconstruction-methods}
-can become computationally expensive and time-consuming. ML algorithms when trained have
-the possibility to skip all of the intermediate steps and directly classify particles 
-from raw detector data. This is particularly useful in high-rate environments and is also
-applicable to non-Cherenkov detectors.
-
-The way that raw data is presented to the ML algorithm is crucial. Often we will see hit
-patterns from photodetector arrays represented as 2D images, with pixel intensities represented
-by colour scales. This makes convolutional neural networks (CNNs) a reasonable choice for ML PID,
-as CNNs are well suited to image processing tasks. Other algorithms such as dense neural networks
-(DNNs) and normalising flows \nolinebreak\cite{Fanelli_2025} are also being explored.
+Many different neural network architectures are being researched. This refers to the order and manner of the sequence of fixed operations 
+that are done by the network. Dense networks consist of purely matrix multiplications, yet are seeing promising results \nolinebreak\cite{film-networks-markhoff_2026}.
+More complicated networks such as normalising flows are closer to previous likelihood methods, but offer exact likelihood evaluation without
+iterative maximisation, combining the known strong performance of the time-imaging reconstruction method with the compute advantages of 
+ML methods \nolinebreak\cite{Fanelli_2025}. 
