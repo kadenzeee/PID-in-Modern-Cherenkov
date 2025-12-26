@@ -1,11 +1,11 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/photomultipliers/mcp-pmts.tex
 % Content for the "MCP-PMTs" subsection
 
-Multichannel plate photomultipliers (MCP-PMTs) are devices that convert and 
+Micro channel plate photomultipliers (MCP-PMTs) are devices that convert and 
 amplify incoming photons into a measurable electrical signal. Photons incident
-on a photocathode emit electrons through the photoelectric effect. These electrons
+on a photocathode emit electrons through the photoelectric effect. These single electrons
 are difficult to measure as an electrical signal, so the number of electrons
-is amplified using a multichannel plate. These are thin wafers that contain
+is amplified using a MCP. These are thin wafers that contain
 thousands of \(\mu\)m capillaries. Via secondary emission, more electrons than 
 are incident are produced \nolinebreak\cite{Bruining_1954}. This amplified electron signal is then incident on 
 an anode plate, where the signal is read as an analogue voltage.
@@ -15,38 +15,37 @@ an anode plate, where the signal is read as an analogue voltage.
 \includegraphics[width=\linewidth]{Images/mcp-pmt.png}
 \caption{\textbf{Cross section of a traditional MCP-PMT.} Due to the proximity of
 the anode and the photocathode, we are able to determine where the incident photon 
-hit on the photocathode. MCP-PMTs are used in an incredible range of fields, 
+hit. MCP-PMTs are used in an incredible range of fields, 
 from blood tests, to spectroscopy, to radar jamming \nolinebreak\cite{photonics12010046}.}\label{fig:traditional-mcp-pmt}
 \end{figure}
 
 In detector physics we are interested in a few properties of MCP-PMTs. Firstly,
 the quantum efficiency (QE) of the photocathode is the probability of an incident photon
-producing a photoelectron. Around 20\% are typical for modern MCP-PMTs. The requirements
-for the PANDA Barrel DIRC ask for a QE of 18\% between 300–400nm \nolinebreak\cite{panda-mcps-Katje_2025}. 
+producing a photoelectron; around 20\% is typical. 
 
 Secondly, the consistency of accurate hits is of great interest. We want uniform gain
-across the entire MCP-PMT, and we do not want secondary electron emissions that cause faulty
-signals. The former is referred to as the gain behaviour, or gain uniformity. The latter, where
-we have erroneous secondary electron signals are called dark counts or afterpulsing depending 
-on the cause. These are signals that are counted as a hit, but do not actually represent an
-incident Cherenkov photon.
+across the entire MCP-PMT, referred to as the gain behaviour. Higher gain means more distinct 
+counts, and overall less uncertainty. We must also minimise faulty
+signals from dark counts. Dark counts are spurious signals caused without
+any incident photon, often due to thermionic emission or field emission. Balancing 
+the gain behaviour, determined mostly by the anode bias, with minimising dark counts 
+is a key challenge. Afterpulsing is where positive ions are created during the electron avalanche. These
+positive ions accelerate backwards, towards the photocathode, causing potential damage and liberating 
+secondary electrons. This creates a correlated, slightly delayed signal, appearing as a false photon hit.
 
-Timing characteristics are also very important. The timing resolution of the MCP-PMT refers to the å
-uncertainty when the detector reports a single photon hit. Modern MCP-PMTs
-are pushing 15ps time resolution \nolinebreak\cite{Lyashenko_2026}. A lower timing resolution allows us to be more precise with
-event reconstruction. The timing resolution is also somewhat inversely correlated to the rate 
-capability of the detector; this is a measure of how many incident photons the MCP-PMT can handle
-before becoming too saturated and therefore not being able to distinguish clear hits. The PANDA Barrel 
-asks for a photoelectron rate capability of 500 \(\text{kHz/cm}^2\) \nolinebreak\cite{panda-mcps-Katje_2025}.
+Timing characteristics are also very important. The timing resolution of the MCP-PMT refers to the
+uncertainty when the detector reports a single photon hit. Modern devices
+are pushing 15ps time resolution \nolinebreak\cite{Lyashenko_2026}. A lower timing 
+resolution allows us to be more precise with event reconstruction in detectors that rely on timing information. 
+The timing resolution is also somewhat inversely correlated to the hit rate 
+capability of the detector, a measure of how many incident photons the sensor can handle
+before becoming too saturated.
 
-Lastly, the lifetime of the MCP-PMT is of interest. If we are building detectors with price 
-tags north of €100 million EUR, we want to make sure they last a good while. The main factors affecting 
-MCP-PMT lifetime include overall exposure to photons, radiation damage and heat degradation/weathering. 
-Minimising dark count rates and afterpulses is also crucial for MCP-PMT lifetime, as these add exposure 
-and send electrons to places where they can cause chemical degradation.
+Lastly, the lifetime of the MCP-PMT is of interest. The main factors affecting 
+lifetime include overall exposure to photons, radiation damage and heat degradation. 
+Minimising dark count rates and afterpulses is also crucial, as these send electrons 
+to areas where they could cause chemical degradation.
 
-MCP-PMT development is easily an entire thesis topic, so we will refrain from 
-indulging more. However, it should be emphasised that this is a topic that is 
-central to particle identification and detector physics; without MCP-PMTs, 
-Cherenkov detectors are impossible.
+MCP-PMT development is an extremely broad field spanning multiple disciplines; this overview 
+just scratches the surface. The topic is central to PID and detector physics as a whole.
 

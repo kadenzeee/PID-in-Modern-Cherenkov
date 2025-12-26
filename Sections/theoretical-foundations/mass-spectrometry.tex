@@ -1,0 +1,36 @@
+% filepath: PID-in-Modern-Cherenkov/Sections/theoretical-foundations/mass-spectrometry.tex
+% Content for the "Mass Spectrometry" subsection
+
+Mass spectrometry refers to the mass measurement of a particle. There are many different methods,
+such as time-of-flight (TOF), gas chromatography, quadrupole ion traps, etc. Mass spectrometry in
+Cherenkov imaging detectors principally requires the measurement of the Cherenkov angle of a 
+particle at a known momentum. Using the relativistic transformations for momentum and energy
+\begin{align}
+\label{equ:relativistic-momentum}
+p &= \gamma m_{0} v      \\
+\label{equ:relativistic-energy}
+E &= \gamma m_{0} c^2   
+\end{align} 
+we can rewrite the Cherenkov angle from Equ \nolinebreak\ref{equ:cherenkov-angle} as
+\begin{equation}
+\cos{\theta_c} = \frac{\sqrt{p^2 + m^2c^2}}{np}\; .
+\label{equ:cherenkov-angle-relativistic}
+\end{equation}
+The Cherenkov angle and the momentum can be used to infer the mass of the particle in a known medium. 
+This equation can be used to plot the analytical curves for the experimental data in Fig \nolinebreak\ref{fig:cherenkov-angle-COMPASS}.
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{Images/cherenkov-angle.png}
+\caption{\textbf{Cherenkov spectrometry of the COMPASS RICH-1 detector at CERN \nolinebreak\cite{Tessarotto_2014}.} There are clear curves for different 
+particle species. The analytical form of these curves can be determined using Equ \nolinebreak\ref{equ:cherenkov-angle-relativistic}. 
+Measurements of points on this curve can provide unique PID.\label{fig:cherenkov-angle-COMPASS}}
+\end{figure}
+
+In modern detector arrays at collider setups, forward detectors provide momentum measurements using 
+TOF systems. Then, Cherenkov angle-imaging detectors (such as RICHs in Sect \nolinebreak\ref{sec:rich})
+provide measurement of the Cherenkov angle. Topology-imaging detectors (such as Super-K in Sect \noelinebreak\ref{sec:neutrino-identification})
+map the entire Cherenkov cone on photons using sensors over a huge area. This is not generally as accurate as angle-imaging, 
+but the experimental programmes only demand mass differentiation between muons and electrons, rather than the precise mass
+measurements in collider setups.
+

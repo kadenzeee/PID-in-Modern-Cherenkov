@@ -42,18 +42,27 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+
+\makeatletter
+\def\l@subsubsection#1#2{}
+\makeatother
+
+
+
 \begin{document}
 
-\includegraphics[width=.7\linewidth]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg}
 
-\title{
+
+\title{\includegraphics[height=1.5cm]{Images/UoE_Stacked Logo_CMYK_v1_160215.jpg} \\
 Physics with Year Abroad, Literature Review:\\
-Particle Identification in Modern Cherenkov Detectors}% Force line breaks with \\
+Particle Identification in Modern Cherenkov Imaging Detectors}% Force line breaks with \\
 
 
 \author{Daniel Markhoff}
- \affiliation{School of Physics and Astronomy, University of Edinburgh, Edinburgh, UK} 
- \affiliation{GSI Helmholtzzentrum für Schwerionenforschung GmbH, Darmstadt, Germany}
+\author{Moritz P Reiter}
+\author{Jochen Schwiening}
+\affiliation{School of Physics and Astronomy, University of Edinburgh, Edinburgh, UK} 
+\affiliation{GSI Helmholtzzentrum für Schwerionenforschung GmbH, Darmstadt, Germany}
 %update your affiliation to you correct palcement location
 
 \date{\today}% It is always \today, today,
@@ -62,16 +71,26 @@ Particle Identification in Modern Cherenkov Detectors}% Force line breaks with \
 \begin{abstract}
 With major detector assemblies lining up for construction at high-energy facilities such as EIC and FAIR, 
 technologies for particle identification are becoming ever more relevant. This review motivates the theory
-of the field, introduces the technologies behind modern Cherenkov detectors, and discusses the implementation 
-of these detectors into upcoming experiments.
-Emphasis is placed on event reconstruction techniques and the challenges presented by cutting-edge physics programmes.
-Persistent challenges include \ldots
-We conclude by outlining promising future developments for Cherenkov detectors.
+of the field, introduces the technologies behind modern Cherenkov imaging detectors, and discusses the implementation 
+of these systems into upcoming experiments. Emphasis is placed on event reconstruction techniques and the 
+challenges presented by cutting-edge physics programmes. Persistent challenges include the continued development of 
+photosensitive devices and deploying modern software and electronics to detector systems.
+We conclude by outlining promising future developments in the field.
 \end{abstract}
 
 \maketitle
 
-\tableofcontents
+\onecolumngrid
+
+\noindent
+\textbf{Edinburgh Advisor:} Moritz P Reiter \hfill mreiter@exseed.ed.ac.uk
+
+\noindent
+\textbf{Placement Supervisor:} Jochen Schwiening \hfill j.schwiening@gsi.de
+
+\vspace{1em}
+\twocolumngrid\tableofcontents
+
 
 \section{\label{sec:intro}Introduction}
 
@@ -85,7 +104,7 @@ We conclude by outlining promising future developments for Cherenkov detectors.
 
 \subsection{\label{sec:relativistic-kinematics}Relativistic Kinematics}
 \vspace{1em}
-\input{Sections/theoretical-foundations/relativistic-kinematics}
+\input{Sections/theoretical-foundations/mass-spectroscopy.tex}
 \subsection{\label{sec:optical-detector-theory}Optical and Imaging Theory}
 \vspace{1em}
 \input{Sections/theoretical-foundations/optical-detector-theory.tex}
@@ -102,7 +121,7 @@ We conclude by outlining promising future developments for Cherenkov detectors.
 \subsection{\label{sec:mcp-pmts}MCP-PMTs}
 \vspace{1em}
 \input{Sections/photomultipliers/mcp-pmts.tex}
-\subsection{SiPMs}
+\subsection{\label{sec:sipms}SiPMs}
 \vspace{1em}
 \input{Sections/photomultipliers/sipms.tex}
 
@@ -120,7 +139,7 @@ We conclude by outlining promising future developments for Cherenkov detectors.
 \input{Sections/dirc.tex}
 
 
-\section{\label{sec:neutrino-identification}Neutrino Identification with Cherenkov Detectors}
+\subsection{\label{sec:neutrino-identification}Neutrino Identification with Event Topology}
 \vspace{1em}
 \input{Sections/neutrino-identification.tex}
 
@@ -143,7 +162,8 @@ We conclude by outlining promising future developments for Cherenkov detectors.
 \section{Conclusion}
 
 \hypersetup{linkbordercolor={1 1 1},citebordercolor=blue,urlbordercolor={1 1 1}}
-\section{References}
+
+\addcontentsline{toc}{section}{References}
 \bibliographystyle{ieeetr-modified}
 \bibliography{bibliography}% Produces the bibliography via BibTeX.
 
