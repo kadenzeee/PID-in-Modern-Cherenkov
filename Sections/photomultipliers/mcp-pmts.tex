@@ -3,12 +3,11 @@
 
 Micro channel plate photomultipliers (MCP-PMTs) are devices that convert and 
 amplify incoming photons into a measurable electrical signal. Photons incident
-on a photocathode emit electrons through the photoelectric effect. These single electrons
-are difficult to measure as an electrical signal, so the number of electrons
-is amplified using a MCP. These are thin wafers that contain
-thousands of \(\mu\)m capillaries. Via secondary emission, more electrons than 
-are incident are produced \nolinebreak\cite{Bruining_1954}. This amplified electron signal is then incident on 
-an anode plate, where the signal is read as an analogue voltage.
+on a photocathode emit electrons through the photoelectric effect. Single electrons
+are difficult to measure, so the number of electrons is amplified using a MCP. 
+These are thin wafers containing thousands of \(\mu\)m capillaries. Via secondary emission, more electrons than 
+are incident are produced \nolinebreak\cite{Bruining_1954}. This amplified electron signal is then recorded on 
+an anode plate as an analogue voltage.
 
 \begin{figure}[h]
 \centering
@@ -23,9 +22,9 @@ In detector physics we are interested in a few properties of MCP-PMTs. Firstly,
 the quantum efficiency (QE) of the photocathode is the probability of an incident photon
 producing a photoelectron; around 20\% is typical. 
 
-Secondly, the consistency of accurate hits is of great interest. We want uniform gain
-across the entire MCP-PMT, referred to as the gain behaviour. Higher gain means more distinct 
-counts, and overall less uncertainty. We must also minimise faulty
+The consistency of accurate hits is crucial to Cherenkov angle-imaging systems. Uniform gain
+across the entire MCP-PMT is ideal. Also, a higher gain means higher peaked 
+counts, and therefore less uncertainty in the timing of the count. We must also minimise faulty
 signals from dark counts. Dark counts are spurious signals caused without
 any incident photon, often due to thermionic emission or field emission. Balancing 
 the gain behaviour, determined mostly by the anode bias, with minimising dark counts 
@@ -33,19 +32,14 @@ is a key challenge. Afterpulsing is where positive ions are created during the e
 positive ions accelerate backwards, towards the photocathode, causing potential damage and liberating 
 secondary electrons. This creates a correlated, slightly delayed signal, appearing as a false photon hit.
 
-Timing characteristics are also very important. The timing resolution of the MCP-PMT refers to the
-uncertainty when the detector reports a single photon hit. Modern devices
-are pushing 15ps time resolution \nolinebreak\cite{Lyashenko_2026}. A lower timing 
-resolution allows us to be more precise with event reconstruction in detectors that rely on timing information. 
-The timing resolution is also somewhat inversely correlated to the hit rate 
-capability of the detector, a measure of how many incident photons the sensor can handle
-before becoming too saturated.
+The timing resolution of the MCP-PMT refers to the width of the response of the sensor from a single 
+photon hit. Modern devices are pushing 15ps time resolution \nolinebreak\cite{Lyashenko_2026}. A lower timing 
+resolution allows us to be more precise with event reconstruction in detectors that rely on timing information 
+for PID, such as DIRC systems. 
 
 Lastly, the lifetime of the MCP-PMT is of interest. The main factors affecting 
 lifetime include overall exposure to photons, radiation damage and heat degradation. 
-Minimising dark count rates and afterpulses is also crucial, as these send electrons 
-to areas where they could cause chemical degradation.
-
-MCP-PMT development is an extremely broad field spanning multiple disciplines; this overview 
+Minimising afterpulsing is also important to prevent damage to the photocathode. MCP-PMT 
+development is an extremely broad field spanning multiple disciplines; this overview 
 just scratches the surface. The topic is central to PID and detector physics as a whole.
 

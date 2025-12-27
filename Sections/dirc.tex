@@ -65,7 +65,7 @@ detectors. The aforementioned time-imaging reconstruction method builds up a PDF
 detector array channels and particle types. Then, events to be classified can be compared to these PDFs on a maximum likelihood basis. The algorithm 
 can be optimised using a lookup table of possible paths a photon could take to a specific channel, eliminating a few unnecessary computations. 
 This allows more flexibility in focusing optics within the detector geometry, as possible paths can be analytically determined and 
-placed in the lookup table. This improves photon yield and therefore PID performance, up to 4.8 ± 0.1 \(\sigma\) \nolinebreak\cite{time-imaging-roman_2020}.
+placed in the lookup table. This improves photon yield and therefore PID performance, up to 4.8 ± 0.1\(\sigma\) \nolinebreak\cite{time-imaging-roman_2020}.
 However, from a software standpoint, the algorithm is unfriendly to parallelise due to heavy use of conditional logic. 
 Parallel hardware prefers to perform the same operation on many different data points. This algorithm demands different operations 
 depending on detector channel, timing, and hypothesis. As such, computation time becomes a problem for large datasets. 

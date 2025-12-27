@@ -3,8 +3,8 @@
 
 Silicon photomultipliers (SiPMs) have been gaining traction recently due to 
 developments in materials, leading to a great ease of manufacturing. They are
-tiny compared to an MCP-PMT, due to their use of `microcells', each containing
-an avalanche photodiode and a quenching resistor, to stop the avalanche.
+tiny compared to an MCP-PMT, due to their use of single photon avalanche diodes (SPADs), each containing
+an avalanche photodiode and a quenching resistor. 
 The review by F. Acerbi and S. Gundacker\nolinebreak\cite{ACERBI201916} 
 provides an excellent in depth description of SiPMs.
 
@@ -14,12 +14,26 @@ provides an excellent in depth description of SiPMs.
 \includegraphics[width=\linewidth]{Images/sipm.png}
 \caption{\textbf{Cross section of SiPM.} SiPMs are externally biased such that 
 each avalanche photodiode is at breakdown voltage, allowing for electron
-avalanches. The gain from an SiPM roughly matches that of a MCP-PMT at \(10^5\)–\(10^6\) \nolinebreak\cite{hamamatsu_2016}}\label{fig:traditional-sipm}
+avalanches. The gain from an SiPM roughly matches that of a MCP-PMT at \(10^5\)–\(10^6\) times amplification\nolinebreak\cite{hamamatsu_2016}}\label{fig:traditional-sipm}
 \end{figure}
 
 SiPMs are much cheaper than MCP-PMTs and have a higher QE, however suffer from a high dark count rate 
-(erroneous hits) and do not have similar rate capabilities. This
+(erroneous hits) and do not have similar hit rate capabilities. This
 has led to the explosion of SiPMs in fields like positron emission photography (PET)
 where precise timings are not necessary, and where ruggedness and sturdiness
 is required. SiPMs also operate at a far lower voltage than MCP-PMTs and are not affected
 by magnetic fields, adding to their dependability in medical settings.
+
+The high dark count rate degrades PID in extremely precise systems, as noise causes statistical
+event reconstruction methods to fail. Also, the low rate capability of SiPMs is problematic for DIRC systems
+especially, which rely on photon arrival time for strong PID performance. In DIRC systems a few thousand photons 
+are guided to a small detector area and all arrive typically within around 20ns, depending on the length of the 
+detector. The typical dead time of one SPAD is between 10–50ns \nolinebreak\cite{Bruschini2019},
+so even though the area of SiPMs are around a quarter of an MCP-PMT pixel, their maximum rate capability is 
+too low to justify the spatial precision in DIRC systems.
+
+To summarise, SiPMs provide an interesting alternative to MCP-PMTs, where their low cost and robust 
+characteristics make them an extremely lucrative option for many applications in photon imaging. Their 
+performance in high-energy physics applications is certainly going to improve in the future, and 
+they are already a serious consideration for future LHCb RICH upgrades \nolinebreak\cite{WOTTON2024168824}
+despite being a relatively new technology (circa 2000) compared to PMTs (1930) \nolinebreak\cite{LUBSANDORZHIEV2006236}. 
