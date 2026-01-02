@@ -55,13 +55,14 @@ for bluer and redder photons separately, massively improving angular resolution.
 These sorts of chromatic corrections via timing information lead to far more sophisticated event reconstruction than RICH systems. As discussed in Section \nolinebreak\ref{sec:statistical-event-reconstruction-methods},
 statistical methods such as maximum likelihood estimation are extremely powerful. DIRC systems offer a unique double-edged sword; complex photon paths, internal reflections,
 and chromatic dispersion make analytical solutions near impossible, but the extremely detailed information available from precise timing measurements allow for robust
-statistical models such as time-imaging \nolinebreak\cite{time-imaging-roman_2020} and machine learning to shine. 
+statistical models such as time-imaging \nolinebreak\cite{time-imaging-roman_2020} and ML to shine. 
 
 \subsubsection{\label{sec:reconstruction-methods}Reconstruction Methods \& PID}
 
 While DIRC systems provide excellent PID performance in compact geometries, their reliance on time-based global likelihood 
-reconstruction from chromatic effects can complicate hit–track association in high-multiplicity collider environments compared to spatially imaging RICH 
-detectors. The aforementioned time-imaging reconstruction method builds up a PDF from expected photon arrival times for all 
+reconstruction from chromatic effects can complicate hit–track association in high-multiplicity collider environments compared to spatially imaging RICH detectors. 
+
+The aforementioned time-imaging reconstruction method builds up a PDF from expected photon arrival times for all 
 detector array channels and particle types. Then, events to be classified can be compared to these PDFs on a maximum likelihood basis. The algorithm 
 can be optimised using a lookup table of possible paths a photon could take to a specific channel, eliminating a few unnecessary computations. 
 This allows more flexibility in focusing optics within the detector geometry, as possible paths can be analytically determined and 
