@@ -3,13 +3,14 @@
 
 Much of modern research is placed into improving photosensor performance in high-rate collider environments. 
 Along with the new age SiPMs, improvements are also being made to MCPs, both towards better spatial and temporal resolution. A process known as 
-atomic layer deposition (ALD) allows for extremely precise manufacturing of the capillaries in an MCP \nolinebreak\cite{ald-mcps-Popecki_2016}.
-ALD coatings also significantly improve the sensor ageing \nolinebreak\cite{2013NIMPA.732..388C},
-the LAPPDs themselves have been shown to have impressive spatial and temporal resolution \nolinebreak\cite{LYASHENKO2020162834}, and further 
-characterisations of HRPPDs, a high-rate upgrade for LAPPDs, are ongoing \nolinebreak\cite{LYASHENKO2026170964,lappd-foulds-holt_2025}.
+atomic layer deposition (ALD) allows for extremely precise manufacturing of the capillaries in an MCP \nolinebreak\cite{ald-mcps-Popecki_2016}, 
+which have been shown to significantly improve sensor ageing \nolinebreak\cite{2013NIMPA.732..388C}. Research into Large Area Picosecond Photodetectors (LAPPDs)
+are attempting to reduce the cost per area of traditional MCP-PMTs while matching their performance characteristics. LAPPDs themselves have been shown to have 
+good spatial and temporal resolution \nolinebreak\cite{LYASHENKO2020162834}, and further characterisations of HRPPDs, a high-rate upgrade for LAPPDs, 
+are ongoing \nolinebreak\cite{LYASHENKO2026170964,lappd-foulds-holt_2025}.
 
-On the software side developments being researched, particularly for DIRCs, are as described in Sect \nolinebreak\ref{sec:reconstruction-methods}. 
-ML has the potential to offer fast particle classification, either alone or in conjunction with other PID methods to speed up their compute time. 
+On the software side developments being researched are as described in Sect \nolinebreak\ref{sec:reconstruction-methods} for DIRC systems. 
+ML has the potential to offer fast particle classification in all Cherenkov imaging systems, either alone or in conjunction with other PID methods to decrease compute time. 
 Effort is being focused into reducing model size, whilst retaining PID performance. This makes the models easier to deploy on the beamline 
 and improves classification speed. 
 
@@ -17,7 +18,7 @@ On the electronics side, developments are increasingly driven by the demand for 
 photosensors. Fast sampling ASICs\cite{Le-Pottier_2025} and high-bandwidth digitisation schemes\cite{WU2023167994} are required to preserve the picosecond scale 
 timing resolution of MCP-based detectors. In high-rate environments, advances in front-end electronics and data acquisition systems aim to 
 reduce dead time and manage large data volumes while maintaining low noise performance. Close integration of sensors with dedicated readout 
-electronics is therefore an active area of research, particularly for LAPPDs.
+electronics is therefore an important area of research.
 
 Finally, reducing the cost of detector systems will always be of great interest. The ease of manufacturing for SiPMs offer the potential
 to significantly reduce the price tag on detector arrays. Reuse of retired detector parts is also a potential cost saving measure; 
