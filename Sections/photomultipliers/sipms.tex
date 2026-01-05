@@ -7,11 +7,9 @@ tiny compared to an MCP-PMT, due to their use of single photon avalanche diodes 
 an avalanche photodiode and a quenching resistor. 
 The simulations by F. Acerbi and S. Gundacker\nolinebreak\cite{ACERBI201916} 
 provide an excellent in depth description of SiPMs.
-
-
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/sipm.png}
+\includegraphics[width=0.9\linewidth]{Images/sipm.png}
 \caption{\textbf{Cross section of SiPM.} SiPMs are externally biased such that 
 each avalanche photodiode is at breakdown voltage, allowing for electron
 avalanches. The gain from an SiPM roughly matches that of a MCP-PMT at \(10^5\)–\(10^6\) times amplification\nolinebreak\cite{hamamatsu_2016}}.\label{fig:traditional-sipm}
@@ -23,12 +21,11 @@ where precise photon timings are not necessary, and where ruggedness and sturdin
 is required. SiPMs also operate at a far lower voltage than MCP-PMTs and are not affected
 by magnetic fields, adding to their dependability in medical settings.
 
-The high dark count rate degrades PID in extremely precise systems, as noise inherently causes statistical
-event reconstruction methods to struggle. Also, the dead time of SiPMs poses thought-provoking problems for DIRC systems
-especially, which rely on photon arrival time for strong PID performance. In DIRC systems a few thousand photons 
-are guided to a small detector area and all arrive typically within around 20-50ns, depending on the length of the 
-detector. The photon multiplicity of a small area on the photosensor array can often be >10. The typical dead time of one SPAD is between 10–50ns \nolinebreak\cite{Bruschini2019},
-so even though the microcells are much smaller than an MCP-PMT pixel, in the particularly photon-dense areas of the DIRC, it is possible to entirely lose some photons due to the dead time of the SiPM.
+The high dark count rate degrades PID in extremely precise systems, as noise causes statistical
+event reconstruction methods to struggle. Also, the dead time of SiPMs poses thought-provoking problems systems which rely on photon arrival time for strong PID performance. In some detector systems, a few thousand photons 
+are guided to a small detector area. These all arrive typically within around 20-50ns, depending on the length of the 
+detector. The multiplicity of a small area (pixel) on the photosensor array can often be \(\geq10\) photons. The typical dead time of one SPAD is between 10–50ns \nolinebreak\cite{Bruschini2019},
+so even though the microcells are much smaller than an MCP-PMT pixel, in the particularly photon-dense areas of the detector, it is possible to entirely lose some photons due to the dead time of the SiPM.
 
 SiPMs provide an interesting alternative to MCP-PMTs, where their low cost and robust 
 characteristics make them an extremely lucrative option for many applications in photon imaging. Their 
