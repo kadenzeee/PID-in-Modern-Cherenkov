@@ -3,7 +3,7 @@
 
 The problem of event reconstruction in modern Cherenkov detectors is to determine what happened inside the
 detector based on the data obtained from the photon sensors. The most common 
-current way of doing this is as a reverse ray-tracing problem. An algorithm
+current way of doing this is through reverse ray-tracing. An algorithm
 iterates through the possible paths a photon can take through the detector,
 and evaluates a Gaussian likelihood under the hypothesis of each particle type \nolinebreak\cite{Santelj_2017}.
 This likelihood is built from the spatial and temporal residuals between the
@@ -21,13 +21,13 @@ hypothesis is more probable:
     \Delta \log \mathcal{L} = \log \mathcal{L_{\text{kaon}} - \log \mathcal{L}_{\text{pion}}}
 \end{equation}
 This can be minimised across all detector hits to find the most probable particle type using various
-numerical methods. Variations on this spatial method include time-imaging \nolinebreak\cite{time-imaging-roman_2020}, 
-where precise photon timing information is also used to build probability density functions (PDFs) as a supplement to spatial information 
+numerical methods. Other likelihood-based methods include time-imaging \nolinebreak\cite{time-imaging-roman_2020}, 
+where precise photon timing information is also used to build probability density functions (PDFs) as a supplement to spatial PDFs 
 for each particle hypothesis. The detected photon times are then compared to these PDFs to form likelihoods. Many modern algorithms
-use a combination of spatial, temporal, and even angular information from other sub-detectors to build more robust likelihood functions.
+use a combination of spatial, temporal, angular information from other sub-detectors, and even photon count information to build more robust likelihood functions.
 
 Likelihood-based methods are among the most powerful and widely used analysis techniques in countless experiments. Their practical 
-application, however, often requires detailed modelling of detector responses and the evaluation of high-dimensional likelihoods, 
+application, however, often requires detailed construction and evaluation of high-dimensional likelihoods, 
 leading to significant computational overhead in complex detectors.
 Machine learning (ML) approaches offer a promising alternative by replacing explicit likelihood construction with data-driven inference. 
 Neural networks can be trained to learn the detector response to different particle hypotheses directly, thereby implicitly capturing the 
