@@ -41,7 +41,7 @@ FUNCTION {init.state.consts}
   #3 'after.sentence :=
   #4 'after.quoted.block :=
   #5 'after.block :=
-  #8 'maxauthors :=
+  #4 'maxauthors :=
 }
 
 STRINGS { s t }
