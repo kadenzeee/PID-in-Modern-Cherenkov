@@ -8,16 +8,14 @@ detector.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/simple-rich-detector.png}
+\includegraphics[width=0.95\linewidth]{Images/simple-rich-detector.png}
 \caption{\textbf{Geant4 simulation of the simplified RICH detector.} The particle track (red) 
 is incident on some material with a refractive index \(n\), called the radiator. In this case,
 an aerogel radiator is simulated. The resulting Cherenkov photons (gray) emitted in a 
-cone are incident on a square array of sensitive photodetectors. In practice, the detector 
-array is often a ring, and there are optics surrounding the device to guide photons towards 
-the detector.}\label{fig:simple-rich}
+cone are incident on a square array of sensitive photodetectors.}\label{fig:simple-rich}
 \end{figure}
 
-The Cherenkov photons are emitted in a cone around the particle track. The detector should not disturb the particle track for detectors further down the beamline. This motivates the ring-shape of many RICH photodetector arrays. The outer radius of the ring is often encased in mirrors or lenses to trap Cherenkov
+The Cherenkov photons are emitted in a cone around the particle track. Depending on physics goals, the detector should not disturb the particle track for detectors further down the beamline. This motivates the ring-shape of some RICH photodetector arrays. The outer radius of the ring is often encased in mirrors or lenses to trap Cherenkov
 photons and guide them towards the photodetector array. 
 
 \subsubsection{Radiators}
@@ -32,36 +30,21 @@ refractive index \(n\) is the key parameter that determines the choice of radiat
 expected particle momenta. Higher refractive indices are necessary for lower momentum particles, which
 is why some accelerator systems use liquid radiators with inherently higher refractive indices.
 
-The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an
-important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The
-refractive index also affects the number of Cherenkov photons produced, as per the Frank-Tamm formula in 
-Eq \nolinebreak\ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon
-yield, such as layering aerogel with different refractive indices without performance cost \nolinebreak\cite{IIJIMA2005383}. 
-Naturally though complexity comes at a cost, especially in the case of finely engineered components such as
-Cherenkov radiators.
+The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The refractive index also affects the number of Cherenkov photons produced, as per Eq \nolinebreak\ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon yield, such as layering aerogel with different refractive indices without performance cost \nolinebreak\cite{IIJIMA2005383}. Naturally though, complexity comes at a monetary cost.
 
-\subsubsection{Optics}
+\subsubsection{Optics (CLAS12 RICH)}
 
-Optical elements are often used in RICH detectors to increase photon yield. Lenses can be used to focus Cherenkov photons
-onto smaller photodetector areas, reducing cost and size. Mirrors can be used to reflect photons that would otherwise
-escape the detector. Other optical tricks such as the aforementioned layered radiator (also called proxy focusing) can be
+Optical elements are often used in RICH detectors to increase photon yield. Lenses and mirrors can be used to focus Cherenkov photons onto smaller photodetector areas, reducing cost and size. Other optical tricks such as the aforementioned layered radiator (also called proximity focusing) can be
 used to tighten the spread of the photon cone, allowing lower momentum charged particles to be measured. 
 
-As an applied example, the pfRICH at the forward section of the ePIC detector makes use of conical mirrors to increase 
-the acceptance angle of particle tracks which can be seen in Fig \nolinebreak\ref{fig:pfrich-conical-mirrors}. More photons means
-better angular resolution and therefore improved event reconstruction.
+As an applied example, the RICH at the forward section of the CLAS12 detector at JLab makes use of spherical mirrors to actively guide photons towards a small area of photodetectors. This both improves the photon yield and the angular acceptance of the detector. More photons means better angular resolution and therefore improved event reconstruction.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/pfRICH-conical-mirrors.png}
-\caption{\textbf{Schematic cross section of the pfRICH.} The conical mirrors (green) near the edge of the 
-vessel mean that Cherenkov photons can be detected from steeper angles than would be traditionally possible \nolinebreak\cite{pfRICH-Brian_2025}}\label{fig:pfrich-conical-mirrors}
+\includegraphics[width=\linewidth]{Images/mirrors-clas12.png}
+\caption{\textbf{Examples of CLAS12 RICH active focusing.} The spherical mirrors near the edge of the 
+vessel mean that Cherenkov photons can be detected from steeper angles than would be traditionally possible.  \nolinebreak\cite{CONTALBRIGO2020163791}}\label{fig:pfrich-conical-mirrors}
 \end{figure}
 
-\subsection{Mechanics \& Integration of Modern Detectors}
+Properly designed active optical elements in Cherenkov imaging detectors provide the possibility to reduce the total cost of the photodetector array by guiding photons to a smaller area, while simultaneously improving the photon yield and therefore the statistics of the measured Cherenkov angle.
 
-Modern detector systems are large, complicated devices that enjoy premium real estate. Integrating a Cherenkov detector (or any detector, for that matter) into such an system presents a unique set of mechanical and design challenges. Mechanical tolerances and alignment are crucial to maintaining accuracy. Optical elements must be precisely aligned and consistently calibrated throughout the detector lifetime, requiring robust mechanical support and space-hungry laser calibration systems. Careful thermal and radiation management are also necessary to ensure the longevity of photosensitive components. Consideration of the surrounding magnetic field from the solenoid used by the TOF detectors is also necessary, especially for PMTs which are magneto-sensitive. 
-
-Ensuring that the detector can be serviced and maintained is also a key consideration, especially for large scale experiments that may run for decades. Some experiments are built on rails to allow the inner detectors (RICH, TOF, trackers etc.) the be slid out for maintenance. These considerations are imperative to the success of a detector.
-
-RICH detectors require a large volume radially to generate and image the cone of Cherenkov photons. The class of detector covered in the next section is far more compact, confining photons to a smaller volume. 

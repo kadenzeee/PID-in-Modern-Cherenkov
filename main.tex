@@ -42,6 +42,15 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
+\fancyhf{} % clear all
+
+% Left = section title, right = page number
+\fancyhead[L]{\textit{\nouppercase{\leftmark}}}
+\fancyhead[R]{\thepage}
+
+% Prevent overlap
+\setlength{\headheight}{14pt}
+
 
 \makeatletter
 \def\l@subsubsection#1#2{}
@@ -90,22 +99,11 @@ We conclude by outlining promising future developments in the field.
 
 
 \section{\label{sec:intro}Introduction}
-
 \input{Sections/introduction.tex}
 
-\section{\label{sec:theoretical-foundations}Theoretical Foundations}
 
-\subsection{\label{sec:cherenkov-radiation}Cherenkov Radiation}
-\vspace{1em}
+\section{\label{sec:cherenkov-radiation}Cherenkov Radiation}
 \input{Sections/theoretical-foundations/cherenkov-radiation}
-
-\subsection{\label{sec:mass-spectrometry}Mass Spectrometry}
-\vspace{1em}
-\input{Sections/theoretical-foundations/mass-spectrometry.tex}
-
-\subsection{\label{sec:statistical-event-reconstruction-methods}Statistical Foundations of Event Reconstruction}
-\vspace{1em}
-\input{Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex}
 
 
 \section{\label{sec:photomultipliers}Photon Detection Technologies}
@@ -113,28 +111,33 @@ We conclude by outlining promising future developments in the field.
 \input{Sections/photomultipliers/pmts.tex}
 
 \subsection{\label{sec:mcp-pmts}MCP-PMTs}
-\vspace{1em}
 \input{Sections/photomultipliers/mcp-pmts.tex}
+
 \subsection{\label{sec:sipms}SiPMs}
-\vspace{1em}
 \input{Sections/photomultipliers/sipms.tex}
 
 
 
-\section{\label{sec:cherenkov-imaging-detectors}Cherenkov Imaging Detectors}
-\vspace{1em}
+\section{\label{sec:cherenkov-imaging-detectors}Track-Based Detectors}
+
+\subsection{\label{sec:mass-spectrometry}PID via \(\theta_c\) Measurement}
+\input{Sections/pid-via-thetac}
 
 \subsection{\label{sec:rich}RICH}
 \input{Sections/rich.tex}
 
+\subsection{\label{sec:statistical-event-reconstruction-methods}Statistical Reconstruction \& PID Frameworks}
+\input{Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex}
 
 \subsection{\label{sec:dirc}DIRC}
 \vspace{1em}
 \input{Sections/dirc.tex}
 
+\input{Sections/mechanics.tex}
 
-\subsection{\label{sec:neutrino-identification}Neutrino Identification with Event Topology}
-\vspace{1em}
+
+\section{\label{sec:topological-detectors} Topological Detectors for Neutrino Astrophysics}
+
 \input{Sections/neutrino-identification.tex}
 
 

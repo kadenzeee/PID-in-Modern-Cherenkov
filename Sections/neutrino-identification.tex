@@ -1,45 +1,18 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/neutrino-identification.tex
-% Content for the "Neutrino Identification with Cherenkov Detectors" subsection
+% Content for the "Topological Detectors for Neutrino Astrophysics" subsection
 
+Topological Cherenkov detectors function more as particle trackers than devices optimised for particle-species discrimination. They image Cherenkov photons across large distances of particle tracks, measuring interaction topology, particle direction, and energy, rather than single-track observables such as the Cherenkov angle \(\theta_c\). Since neutrino interactions are rare and large in scale, the detector and radiator material must span an enormous volume to obtain a sufficient flux. The simple solution to this is to use large natural volumes of material such as water or ice. This presents a unique set of engineering challenges, such as waterproofing the detectors and synchronising timing across large distances. It is also very difficult to separate the weakly interacting neutrino events from other background. Different collaborations have taken unique approaches to these problems depending on their physics programmes.
 
-While track-based PID detectors such as DIRCs can not directly detect neutrally charged neutrinos,
-events involving charged particles can be detected and reconstructed in a system known as a 
-topological-imaging detector. Since neutrino interactions are rare and large in scale, the 
-detector and radiator material must span an enormous volume. The simple solution to this is 
-to use large natural volumes of material such as water or ice. This presents a unique set of engineering 
-challenges, such as waterproofing the detectors and synchronising timing across large distances. 
-It is also very difficult to separate the weakly interacting neutrino events from other background. 
-Different collaborations have taken unique approaches to these problems depending on their 
-physics programmes.
+\subsection{Sources of Neutrinos}
 
-\subsubsection{Water Cherenkov Detectors (Super-K)}
-Water Cherenkov Detectors (WCDs) use large volumes of ultra-pure water as the radiator material. The Super-Kamiokande (Super-K)
-experiment in Japan (Fig \nolinebreak\ref{fig:super-k}) is a famous example of a WCD, using 50,000 tons of water surrounded by over 11,000 PMTs,
-buried under a kilometre of mountain to shield from natural radiation. The detector is used to study neutrinos at MeV-GeV 
-energies from various sources, including the sun, atmosphere, supernovae, allowing us to study neutrino-specific phenomena \nolinebreak\cite{super-k-neutrino-osc_1998},
-which before Super-K were largely unexplored.
+There are many astrophysical sources of neutrinos of current interest, such as active galactic nuclei, neutron stars, gamma-ray bursts, and supernovae, ranging from MeV to PeV energies. These neutrinos are predominantly products of pion, muon and neutron decays. 
+\begin{align*}
+\pi^+ \rightarrow \mu^+ + \nu_{\mu} \\ 
+\mu^+ \rightarrow e^+ + \nu_e + \bar{\nu}_{\mu} \\
+n \rightarrow p + e^- + \bar{\nu}_e
+\end{align*}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\linewidth]{Images/super-k.jpg}
-\caption{\textbf{Inside the cylindrical water tank of Super-K.} Boats are used for the maintenance 
-of water photodetectors. The detector is designed to identify neutrinos with MeV to GeV energies. 
-(Photo: Kamioka Observatory, ICRR (Institute for Cosmic Ray Research), The University of Tokyo)}\label{fig:super-k}
-\end{figure}
-
-Super-K is a precision detector for low energy neutrino physics. If we wish to study higher energy phenomena, such as 
-cosmic neutrinos in the TeV-PeV range, we need to significantly increase the scale of the detector.
-
-\subsubsection{Cosmogenic Neutrinos (IceCube)}
-
-The IceCube Neutrino Observatory is a cubic kilometre scale Cherenkov detector buried deep in the Antarctic ice sheet \nolinebreak\cite{Aartsen_2017}. 
-It uses over 5,000 photodetector modules arranged on 86 strings, deployed between 1.5 and 2.5 km deep. The intra-string separation varies from 41 - 105m. The detector is 
-designed to identify high energy neutrinos from astrophysical sources. These neutrinos are filtered from low energy neutrinos
-and other background by using the entire Earth as a shield; events that come from the core of the Earth are almost certainly high energy neutrinos, as other particles would be absorbed. 
-
-Fig \nolinebreak\ref{fig:cosmic-neutrinos} depicts high energy cosmic neutrinos being formed through the Greisen–Zatsepin–Kuzmin (GZK)
-process, where ultra high energy (\(\approx 8\) joule) cosmic rays, accelerated by natural sources like black holes, interact with the cosmic 
-microwave background radiation to produce pions, which then decay into neutrinos.
+The relative contribution of these channels depends on the production environment and neutrino energy. There are also ultra-high energy sources of neutrinos, ranging from PeV to EeV energies. Protons near black holes are accelerated to incredible velocities where they are able to interact with the cosmic microwave background. Then, the produced pions decay into extremely fast-travelling neutrinos. This process is known as the Greisen-Zatsepin-Kuzmin (GZK) process, as depicted in Fig \ref{fig:cosmic-neutrinos}.
 
 \begin{figure}[h]
 \centering
@@ -48,6 +21,22 @@ microwave background radiation to produce pions, which then decay into neutrinos
 interact with the cosmic background, decaying through intermediary steps into various high energy neutrinos \nolinebreak\cite{iceCUBE-Halzen_2025}.}\label{fig:cosmic-neutrinos}
 \end{figure}
 
+Detectors investigating these processes must use kiloton-gigaton volumes of radiator material to track these neutrinos due to their high energies and minimal cross-section. As such, the material used must be cost effective and easy to handle.
+
+\subsection{Water Cherenkov Detectors (Super-K)}
+Water Cherenkov Detectors (WCDs) use large volumes of ultra-pure water as the radiator material. The Super-Kamiokande (Super-K)
+experiment in Japan is a famous example of a WCD, using 50,000 tons of water surrounded by over 11,000 PMTs,
+buried under a kilometre of mountain to shield from natural radiation. The detector is used to study neutrinos at MeV-GeV 
+energies from various sources, including the sun, atmosphere, supernovae. The detector has investigated neutrino-specific phenomena \nolinebreak\cite{super-k-neutrino-osc_1998},
+which before Super-K were largely unexplored.
+
+Super-K is a precision detector for low energy neutrino physics. If we wish to study higher energy phenomena, such as neutrinos generated by the GZK process, we need to significantly increase the scale of the detector. This means that using pure water is unfeasible, and we must search for natural features on the Earth to act as a Cherenkov radiator.
+
+\subsection{Ice Cherenkov Detectors (IceCube)}
+
+The IceCube Neutrino Observatory is a cubic kilometre scale Cherenkov detector buried deep in the natural Antarctic ice sheet \nolinebreak\cite{Aartsen_2017}. 
+It uses over 5,000 photodetector modules arranged on 86 strings, deployed between 1.5 and 2.5 km deep. The intra-string separation varies from 41 - 105m. The detector is designed to study ultra-high energy neutrinos. These neutrinos are filtered from low energy neutrinos and other background by using the entire Earth as a shield; up-going events are strongly enriched in high-energy neutrino interactions, as atmospheric muons are absorbed by the Earth. 
+
 Fig \nolinebreak\ref{fig:ice-cube-event-display} shows such a cosmic event from IceCube, where a high energy neutrino has interacted with the ice to produce muons and subsequent Cherenkov radiation.
 The thickness of the strings represents photon intensity, while the colours represent timing information, red being at the beginning of an event and green/blue being later in time.
 
@@ -55,8 +44,7 @@ The thickness of the strings represents photon intensity, while the colours repr
 \centering
 \includegraphics[width=\linewidth]{Images/ice-cube-event-display.png}
 \caption{\textbf{IceCube event display.} Multiple charged particle tracks can be distinguished. Maximum likelihood methods 
-can be used to parse the muon tracks to identify neutrino interactions in the water \cite{iceCUBE-Halzen_2025}.}\label{fig:ice-cube-event-display}
+can be used to reconstruct the muon tracks in the ice \cite{iceCUBE-Halzen_2025}.}\label{fig:ice-cube-event-display}
 \end{figure}
 
-Cherenkov detectors have proven to be invaluable tools in the current study of physics, but they also have a promising future. We will now look 
-at some case studies of upcoming detectors.
+Cherenkov detectors have proven to be invaluable tools in the current study of physics, but they also have a promising future. We will now discuss the main points of open research in Cherenkov-based detector physics.

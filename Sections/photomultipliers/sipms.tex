@@ -12,18 +12,10 @@ each avalanche photodiode is at breakdown voltage, allowing for electron
 avalanches. The gain from an SiPM roughly matches that of a MCP-PMT at \(10^5\)–\(10^6\) amplification\nolinebreak\cite{hamamatsu_2016}.}\label{fig:traditional-sipm}
 \end{figure}
 
-SiPMs are overall cheaper per unit area than MCP-PMTs including all cryogenic and electrical supporting systems, and have a higher QE, however suffer from a high dark count rate and do not necessarily have similar hit rate capabilities, as the hit rate is mainly dependent on the density of SPADs. This
-has led to a surge of SiPMs being used in fields like positron emission photography (PET)
-where precise sub \(50\text{ps}\) single-photon timing resolutions are not necessary, and where ruggedness and sturdiness
-is required. SiPMs also operate at a far lower voltage than MCP-PMTs and are not affected
-by magnetic fields, adding to their dependability in medical settings.
+SiPMs are overall cheaper per unit area than MCP-PMTs including all cryogenic and electrical supporting systems, and have a higher QE, however suffer from a high dark count rate and do not necessarily have similar hit rate capabilities, as the hit rate is mainly dependent on the density of SPADs. This has led to a surge of SiPMs being used in fields like positron emission photography (PET) where precise sub \(50\text{ps}\) single-photon timing resolutions are not necessary. SiPMs also operate at far lower voltages than MCP-PMTs and are not affected by magnetic fields, adding to their dependability in medical settings.
 
 The high dark count rate degrades PID in extremely precise systems, as noise causes statistical event reconstruction methods to struggle. This is mitigated with cryogenic cooling, however still remain around the \(\text{MHz}/\text{cm}^2\) level, compared to the MCP-PMTs at only a few \(\text{Hz}/\text{cm}^2\).
 
-Also, the dead time of SiPMs poses thought-provoking problems for systems which rely on precise single-photon arrival time for strong PID performance. The typical dead time of one SPAD is between 10–50ns \nolinebreak\cite{Bruschini2019},
-so even though the microcells are much smaller than an MCP-PMT pixel, in the particularly photon-dense areas of the detector, it is possible to entirely lose some photons due to the dead time of the SiPM.
+The dead time of SiPMs poses potential issues for systems which rely on high photon multiplicity for strong PID performance. The typical dead time of one SPAD is between 10–50ns \nolinebreak\cite{Bruschini2019}, so even though the microcells are much smaller than an MCP-PMT pixel, in the particularly photon-dense areas of the detector, it is possible lose some photons due to the dead time of the SiPM.
 
-SiPMs provide an interesting alternative to MCP-PMTs, where their low cost and robust 
-characteristics make them an extremely lucrative option for many applications in photon imaging. Their 
-performance in high-energy physics applications is certainly going to improve in the future, and 
-they are already a serious consideration for future LHCb RICH upgrades. 
+SiPMs provide an interesting alternative to MCP-PMTs, where their low cost and robust characteristics make them an lucrative option for many applications. Their performance in high-energy physics applications is certainly going to improve, and they are already a serious consideration for future LHCb RICH upgrades. 

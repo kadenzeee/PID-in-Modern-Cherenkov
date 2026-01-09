@@ -1,13 +1,10 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/theoretical-foundations/statistical-event-reconstruction-methods.tex
-% Content for the "Statistical Event Reconstruction Methods" subsection
+% Content for the "Statistical Reconstruction & PID Frameworks" subsection
 
-The problem of event reconstruction in modern Cherenkov detectors is to determine what happened inside the
-detector based on the data obtained from the photon sensors. The most common 
-current way of doing this is through reverse ray-tracing. An algorithm
-iterates through the possible paths a photon can take through the detector,
-and evaluates a Gaussian likelihood under the hypothesis of each particle type \nolinebreak\cite{Santelj_2017}.
-This likelihood is built from the spatial and temporal residuals between the
-detected photon hits and the expected photon hits from the ray-tracing. For example, a Gaussian spatial
+In modern Cherenkov detectors, event reconstruction and particle identification are often performed within a unified statistical framework. In the following, we distinguish conceptually between the reconstruction of event observables and the subsequent PID decision, while noting that many algorithms perform both tasks simultaneously.
+
+The problem of event reconstruction in modern Cherenkov detectors is to determine Cherenkov photon paths inside the detector based on the observable data obtained from the photon sensors. The most common method of doing this currently is through reverse ray-tracing. An algorithm iterates through the possible paths a photon can take through the detector, and evaluates a Gaussian likelihood under the hypothesis of each particle type \nolinebreak\cite{Santelj_2017}.
+This likelihood is built from the spatial and temporal residuals between the detected photon hits and the expected photon hits from the ray-tracing. For example, a Gaussian spatial
 likelihood can be expressed as:
 \begin{equation}
     \mathcal{L}_h = \prod_{i=1}^{N} \frac{1}{\sqrt{2 \pi} \sigma} \exp \left( -{\frac{( x_i - \langle x_{i,h} \rangle)^2}{2 \sigma^2}} \right)
@@ -20,17 +17,11 @@ hypothesis is more probable:
 \begin{equation}
     \Delta \log \mathcal{L} = \log \mathcal{L_{\text{kaon}} - \log \mathcal{L}_{\text{pion}}}
 \end{equation}
-This can be minimised across all detector hits to find the most probable particle type using various
-numerical methods. Other likelihood-based methods include time-imaging \nolinebreak\cite{time-imaging-roman_2020}, 
-where precise photon timing information is also used to build probability density functions (PDFs) as a supplement to spatial PDFs 
-for each particle hypothesis. The detected photon times are then compared to these PDFs to form likelihoods. Many modern algorithms
-use a combination of spatial, temporal, angular information from other sub-detectors, and even photon count information to build more robust likelihood functions.
+This can be minimised across all detector hits to find the most probable particle type using various numerical methods. This method therefore implicitly reconstructs the observables, and then uses these observables with the end goal of identifying the incident particle. These implicitly reconstructed observables can be used as metrics for detector performance.
 
-Likelihood-based methods are among the most powerful and widely used analysis techniques in countless experiments. Their practical 
-application, however, often requires detailed construction and evaluation of high-dimensional likelihoods, 
+Other likelihood-based methods include time-imaging \nolinebreak\cite{time-imaging-roman_2020}, where precise photon timing information is also used to build probability density functions (PDFs) as a supplement to spatial PDFs for each particle hypothesis. The detected photon times are then compared to these PDFs to form likelihoods. Many modern algorithms use a combination of spatial, temporal, angular information from other sub-detectors, and even photon count information to build more robust likelihood functions.
+
+Likelihood-based methods are among the most powerful and widely used analysis techniques in countless experiments. Their practical application, however, often requires detailed construction and evaluation of high-dimensional likelihoods, 
 leading to significant computational overhead in complex detectors.
-Machine learning (ML) approaches offer a promising alternative by replacing explicit likelihood construction with data-driven inference. 
-Neural networks can be trained to learn the detector response to different particle hypotheses directly, thereby implicitly capturing the 
-information normally encoded in likelihood functions. This has 
-already seen encouraging results on Geant4-simulated data for the Hyper-Kaminokande
-experiment \nolinebreak\cite{Prouse_2023} and for the PANDA Barrel DIRC \nolinebreak\cite{film-networks-markhoff_2026}.
+
+Machine learning (ML) approaches offer a promising alternative by replacing PDF construction with data-driven inference. Neural networks can be trained to learn the detector response to different particle hypotheses directly, thereby implicitly capturing the information normally encoded in carefully constructed PDFs. This has already seen encouraging results on Geant4-simulated data for the Hyper-Kaminokande experiment \nolinebreak\cite{Prouse_2023} and for the PANDA Barrel DIRC \nolinebreak\cite{film-networks-markhoff_2026}.

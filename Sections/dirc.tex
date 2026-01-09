@@ -1,5 +1,5 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/dirc.tex
-% Content for the "Detection of Internally Reflected Cherenkov Light" subsection
+% Content for the "DIRC" subsection
 
 Devices that detect internally reflected Cherenkov light are a class of Cherenkov imaging detectors, called DIRCs for short. They use solid transparent bars or plates as Cherenkov radiators, made typically from fused silica quartz, to both generate and guide Cherenkov photons to the photodetectors. Fig \nolinebreak\ref{fig:panda-dirc} shows a detailed rendering of the PANDA barrel detector and the components making up one sector \nolinebreak\cite{Singh_2019}. 
 
@@ -11,30 +11,19 @@ barrel-like arrangement, forming the DIRC detector. Photons are internally refle
 }\label{fig:panda-dirc}
 \end{figure}
 
-The basic principle of DIRC operation is similar to that of other Cherenkov detectors; charged
-particles incident on a medium with refractive index \(n>1\) emit Cherenkov photons in a cone,
-and we try to measure the principle angle of this cone. However, in a DIRC detector the complexity
-arises from the optics of trapping and guiding the Cherenkov photons to a small array of photodetectors.
+The basic principle of DIRC operation is equivalent to that of RICH detectors; charged particles incident on a medium with refractive index \(n>1\) emit Cherenkov photons in a cone, and we try to measure the principle angle of this cone. However, in a DIRC detector the complexity arises from the optics of trapping and guiding the Cherenkov photons to a small array of photodetectors. This necessitates the use of statistical methods for PID, rather than direct measurement as in RICH detectors.
 
 \subsubsection{\label{sec:internal-reflection}Photon Transport via Internal Reflection}
 
+Similarly to photon transport in optical fibres, the Cherenkov photons produced in the quartz bars of a DIRC are trapped via total internal reflection as shown in Fig \nolinebreak\ref{fig:panda-dirc}. The photons propagate to the end of the bar, where they are focused into an expansion volume, and then onto the photodetector array. The DIRC relies on photons internally reflecting hundreds of times with minimal loss, all while preserving the Cherenkov angle. The fused silica bars provide extremely smooth surfaces to facilitate this, with surface roughness generally possible on the order of 3-10 angstroms \nolinebreak\cite{fused-silica-smooth-TAN2023}.
 
-Similarly to photon transport in optical fibres, the Cherenkov photons produced in the quartz bars of a DIRC 
-are trapped via total internal reflection as shown in Fig \nolinebreak\ref{fig:panda-dirc}. The photons propagate to the end of the bar,
-where they are focused into an expansion volume, and then onto the photodetector array. The DIRC relies on photons internally 
-reflecting hundreds of times with minimal loss, all while preserving the Cherenkov angle. The fused silica bars provide 
-extremely smooth surfaces to facilitate this, with surface roughness generally possible on the order of 3-10 angstroms \nolinebreak\cite{fused-silica-smooth-TAN2023}.
-
-The quartz bars are also UV transparent, allowing Cherenkov photons in the near-UV range to be detected, increasing the photon yield of the detector. Fused silica quartz is also known to be radiation hard, which will allow the detector to operate in the high radiation environments of modern accelerators without significant degradation over time \nolinebreak\cite{radiation-hardness-silica-HOEK2008190}.
-The fused silica bars also have a good refractive index of around 1.47 in the visible spectrum, giving large Cherenkov angles, without pushing too many photons into the undetectable UV range.
-
+The quartz bars are also UV transparent, allowing Cherenkov photons in the near-UV range to be detected, increasing the photon yield of the detector. Fused silica quartz is also known to be radiation hard, which will allow the detector to operate in the high radiation environments of modern accelerators without significant degradation over time \nolinebreak\cite{radiation-hardness-silica-HOEK2008190}. The fused silica bars also have a good refractive index of around 1.47 in the visible spectrum, giving large Cherenkov angles, without pushing too many photons into the undetectable UV range.
 
 \subsubsection{\label{sec:timing-resolution}Chromatic Effects \& Timing Resolution}
 
 Since Cherenkov photons are produced across a range of wavelengths, chromatic dispersion is unavoidable. Since the quartz bars are often meters long, blue photons often arrive hundreds of picoseconds later than red photons. This is due to the wavelength dependence of the refractive index, which is around 1.50 for blue light and 1.47 for red light in quartz. However, dispersion can be corrected for if the photon arrival time is measured with sufficient precision, making it a crucial aspect of DIRC design. 
 
-Modern MCP-PMTs are able to achieve single-photon timing resolutions on the order of 15–20ps \nolinebreak\cite{Lyashenko_2026,DavidsonPHOTEK_2025,QianIHEP_2024}. 
-Improvements in readout electronics and signal processing are also pushing timing precisions lower \nolinebreak\cite{electronics-readout-KEIZER2024169664}. These advancements allow photon timing to become a far more powerful observable; detected photons provide accurate \(x, y, t\) rather than just \(x, y\). We can bake this information into our event reconstruction algorithms, simulating expected photon arrival times for bluer and redder photons separately, massively mitigating the effects of chromatic dispersion in the fused silica. 
+Modern MCP-PMTs are able to achieve single-photon timing resolutions \(\leq 50\text{ps}\) \nolinebreak\cite{Lyashenko_2026,DavidsonPHOTEK_2025,QianIHEP_2024}. Improvements in readout electronics and signal processing are also pushing timing precisions lower \nolinebreak\cite{electronics-readout-KEIZER2024169664}. These advancements allow photon timing to become a far more powerful observable; detected photons provide accurate \(x, y, t\) rather than just \(x, y\). We can bake this information into our event reconstruction algorithms, simulating expected photon arrival times for bluer and redder photons separately, massively mitigating the effects of chromatic dispersion in the fused silica. 
 
 These sorts of chromatic corrections via timing information lead to far more sophisticated event reconstruction than RICH systems. As discussed in Section \nolinebreak\ref{sec:statistical-event-reconstruction-methods},
 statistical methods such as maximum likelihood estimation are extremely powerful. DIRC systems offer a unique double-edged sword; complex photon paths, internal reflections,
@@ -52,12 +41,12 @@ However, from a software standpoint, the algorithm is unfriendly to parallelise 
 Parallel hardware prefers to perform the same operation on many different data points. This algorithm demands different operations 
 depending on detector channel, timing, and hypothesis. As such, computation time becomes a problem for large datasets. 
 
+\subsubsection{\label{sec:machine-learning}Machine Learning}
+
 ML on the other hand is significantly easier to parallelise. Raw detector data is fed to the network on a per-event level and a sequence of fixed operations (mostly matrix multiplications) are performed. These ML models are easy to distribute onto modern hardware. Since their fixed operation processing speed is predictable per event, as it is correlated to model size, data processing is far less likely to bottleneck; we are able to process batches of events at a time and can reliably expect all events to finish processing at 
 around the same time. This is in contrast to variable latency such as in time-imaging reconstruction, where often batches are waiting on
 one particularly difficult event to finish processing before starting the next batch. These advantages make ML scaleable in a way that maximum likelihood algorithms are not. 
 
-Many different neural network architectures are being researched. This refers to the order and manner of the sequence of fixed operations 
-that are done by the network. Dense networks consist of purely matrix multiplications, yet are seeing promising results \nolinebreak\cite{film-networks-markhoff_2026}.
-More complicated networks such as normalising flows are closer to previous likelihood methods, but offer exact likelihood evaluation without
-iterative maximisation, combining the known strong performance of the time-imaging reconstruction method with the compute advantages of 
-ML methods \nolinebreak\cite{Fanelli_2025}. 
+Many different neural network architectures are being researched. This refers to the order and manner of the sequence of fixed operations that are done by the network. Dense networks consist of purely matrix multiplications, yet are seeing promising results \nolinebreak\cite{film-networks-markhoff_2026}. More complicated networks such as normalising flows are closer to previous PDF construction methods, but offer exact likelihood evaluation without iterative maximisation, combining the known strong performance of the PDF-based methods with the compute advantages of ML methods \nolinebreak\cite{Fanelli_2025}. 
+
+While such approaches have demonstrated significant gains in PID performance, their impact must be understood within the broader context of detector design, where the available information is fundamentally constrained by the underlying hardware and physics requirements.
