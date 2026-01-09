@@ -4,7 +4,7 @@
 Cherenkov radiation is a phenomenon that occurs when a charged particle travels through a dielectric medium 
 with refractive index \(n(\lambda)\) at a speed greater than the phase velocity in that medium. This effect 
 was first observed by Pavel Cherenkov in 1934 \nolinebreak\cite{Cherenkov_1937} and later explained theoretically by Ilya 
-Frank and Igor Tamm \nolinebreak\cite{Frank_1937}. 
+Frank and Igor Tamm.\nolinebreak\cite{Frank_1937}
 
 The angle of Cherenkov radiation \(\theta_c\) relative to the particle track, for a particle of speed \(\beta c\) in a medium
 with refractive index \(n\) is
@@ -14,17 +14,15 @@ with refractive index \(n\) is
 
 From Maxwell's equations arises that electromagnetic propagation with wavelength \(\lambda\) will have its phase 
 velocity modified by the medium it is travelling through. This leads to the idea of refractive index \(n(\lambda) = c/v_p\), 
-defined as the ratio between the speed of light in vacuum \(c\) and the phase velocity \(v_p\) in the medium. The condition
-for Cherenkov radiation to occur is then \(v > c/n\).
+the ratio between the speed of light \(c\) and the phase velocity \(v_p\). The condition for Cherenkov radiation is then \(v > c/n\).
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/cherenkov-diagram-pdg.png}
+\includegraphics[width=0.9\linewidth]{Images/cherenkov-diagram-pdg.png}
 \caption{\textbf{Cherenkov emission of photons and wavefront.} A particle travels through a medium with velocity \(v\). 
 Photons are emitted at the group velocity \(v_{g}\) and angle \(\theta_c\) to the path of travel of the particle, 
-giving the characteristic blue shock cone. In a dispersive medium, \(\theta_c + \eta \neq 90^\circ\) generally \nolinebreak\cite{PhysRevD.110.030001}.}\label{fig:cherenkov-diagram}
+giving the characteristic blue shock cone.\nolinebreak\cite{PhysRevD.110.030001}}\label{fig:cherenkov-diagram}
 \end{figure}
-
 Let the photons have frequency \(\omega\) and wavenumber \(k = 2\pi/\lambda\). They propagate at the group velocity,
 \(v_g = d\omega/dk\). The photons are concentrated in a thin conical shell as shown in Fig \nolinebreak\ref{fig:cherenkov-diagram},
 with an opening half-angle \(\eta\) as
@@ -32,18 +30,15 @@ with an opening half-angle \(\eta\) as
     \cot\eta = \left[\tan\theta_c + \beta^2\omega \; n(\omega)\frac{dn}{d\omega}\cot\theta_c\right]d\omega
 \end{equation}
 where we are considering a small frequency range. Unless the medium is non-dispersive, where \(dn/d\omega = 0\),
-generally \(\theta_c + \eta \neq 90^\circ\), and the Cherenkov wavefront `sideslips' along with the particle\nolinebreak\cite{PhysRevD.110.030001}.
+generally \(\theta_c + \eta \neq 90^\circ\), and the Cherenkov wavefront sideslips along with the particle. \nolinebreak\cite{PhysRevD.110.030001}
 
 The number of photons emitted per unit length is given by the Frank-Tamm formula
 \begin{equation}
 \frac{d^2N}{dx\; d\lambda} = \frac{2\pi \alpha z^2}{\lambda^2}\left( 1 - \frac{1}{\beta^2n^2(\lambda)}\right)
 \label{equ:frank-tamm-formula}
 \end{equation}
-for a particle with charge \(ze\) and wavelength \(\lambda\), moving through a medium with 
-refractive index \(n(\lambda)\), and where \(\alpha\) is the fine structure constant\nolinebreak\cite{Frank_1937}. 
+for a particle with charge \(ze\) and wavelength \(\lambda\), moving through a medium with refractive index \(n(\lambda)\), and where \(\alpha\) is the fine structure constant.\nolinebreak\cite{Frank_1937}
 For most uses, Equ \nolinebreak\ref{equ:frank-tamm-formula} 
-should be integrated over the region \(\beta n(\lambda) > 1\). The number of photons \(N\) emitted per unit 
-length is inversely proportional to the square of the wavelength, explaining the characteristic blue glow of 
-Cherenkov radiation.
+should be integrated over the region \(\beta n(\lambda) > 1\). The number of photons \(N\) emitted per unit length is inversely proportional to the square of the wavelength, explaining the characteristic blue glow of Cherenkov radiation.
 
 

@@ -1,10 +1,7 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/rich.tex
 % Content for the "Ring Imaging Cherenkov Detectors (RICH)" subsection
 
-Ring Imaging Cherenkov Detectors (RICH) are a class of Cherenkov detectors that use a radiator
-at a known distance from a photodetector array to measure the Cherenkov angle of incident
-particles. Shown in Fig \nolinebreak\ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH
-detector. 
+Ring Imaging Cherenkov Detectors (RICH) are a class of Cherenkov detectors that use a radiator at a known distance from a photodetector array to measure \(\theta_c\) of incident charged particles, and thus distinguish between particle species. Shown in Fig \nolinebreak\ref{fig:simple-rich} is a simplified Geant4 simulation of a RICH detector, with a square tiled photodetector array and aerogel radiator.
 
 \begin{figure}[h]
 \centering
@@ -18,19 +15,16 @@ cone are incident on a square array of sensitive photodetectors.}\label{fig:simp
 The Cherenkov photons are emitted in a cone around the particle track. Depending on physics goals, the detector should not disturb the particle track for detectors further down the beamline. This motivates the ring-shape of some RICH photodetector arrays. The outer radius of the ring is often encased in mirrors or lenses to trap Cherenkov
 photons and guide them towards the photodetector array. 
 
+RICH detectors provide effective PID for high momentum charged particle species. As they image Cherenkov photons and do not interact with particle species directly (e.g. as calorimeters do), they are advantageous in large setups where many different detector types are layered.
+
 \subsubsection{Radiators}
 
-Different RICH experiments use different radiator materials. Common choices include aerogel
-such as in the Belle II ARICH \nolinebreak\cite{abe2010belleiitechnicaldesign}, gaseous radiators (noble gases, halogenoalkanes) such as in
-the old LHCb RICH \nolinebreak\cite{LHCbRICH2000technicaldesign} and (although in mostly retired detectors) 
-liquids such as in the barrel CRID at SLAC \nolinebreak\cite{barrelCRID1999SLACtechnicalreport}.
-
 Consider the Cherenkov angle condition from Eq \nolinebreak\ref{equ:cherenkov-angle}. The radiator
-refractive index \(n\) is the key parameter that determines the choice of radiator, depending on 
-expected particle momenta. Higher refractive indices are necessary for lower momentum particles, which
-is why some accelerator systems use liquid radiators with inherently higher refractive indices.
+refractive index \(n\) is the key parameter that determines the choice of radiator, depending on expected particle momenta. Higher refractive indices are necessary for lower momentum particles to generate sufficient \(\theta_c\) resolution.
 
-The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The refractive index also affects the number of Cherenkov photons produced, as per Eq \nolinebreak\ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon yield, such as layering aerogel with different refractive indices without performance cost \nolinebreak\cite{IIJIMA2005383}. Naturally though, complexity comes at a monetary cost.
+The refractive index is also wavelength dependent, which is a source of chromatic dispersion. This is an important consideration for radiator materials, as chromatic dispersion can degrade angular resolution. The refractive index also affects the number of Cherenkov photons produced, as per Eq \nolinebreak\ref{equ:frank-tamm-formula}. There are also tricks to play with the radiator design to improve photon yield, such as layering aerogel with different refractive indices without performance cost.\nolinebreak\cite{IIJIMA2005383} Naturally though, complexity comes at a monetary cost.
+
+It is also important for the radiators to be maximally transparent. This minimises absorption, improving photon yield, and reduces scattering, sharpening the ring image.
 
 \subsubsection{Optics (CLAS12 RICH)}
 
@@ -41,10 +35,10 @@ As an applied example, the RICH at the forward section of the CLAS12 detector at
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=\linewidth]{Images/mirrors-clas12.png}
+\includegraphics[width=0.85\linewidth]{Images/mirrors-clas12.png}
 \caption{\textbf{Examples of CLAS12 RICH active focusing.} The spherical mirrors near the edge of the 
 vessel mean that Cherenkov photons can be detected from steeper angles than would be traditionally possible.  \nolinebreak\cite{CONTALBRIGO2020163791}}\label{fig:pfrich-conical-mirrors}
 \end{figure}
 
-Properly designed active optical elements in Cherenkov imaging detectors provide the possibility to reduce the total cost of the photodetector array by guiding photons to a smaller area, while simultaneously improving the photon yield and therefore the statistics of the measured Cherenkov angle.
+Properly designed active optical elements in Cherenkov imaging detectors provide the possibility to reduce the total cost of the photodetector array by guiding photons to a smaller area, while simultaneously improving the photon yield and therefore the statistics of the measured \(\theta_c\).
 

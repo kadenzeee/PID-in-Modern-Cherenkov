@@ -1,21 +1,20 @@
 % filepath: PID-in-Modern-Cherenkov/Sections/photomultipliers/mcp-pmts.tex
 % Content for the "MCP-PMTs" subsection
 
-Micro-channel plate photomultipliers (MCP-PMTs) are an example of a photosensor that is resistant to magnetic fields. The micro-channel plates (MCPs) are thin wafers containing 5-20 \(\mu\)m diameter capillaries. Typically, two wafers are arranged such that the capillaries form a chevron pattern. Similarly to PMTs, electrons produced via secondary emission with this MCP arrangement can achieve gains of \(10^6\) or more. This amplified electron signal is then recorded on 
-an anode plate as an analogue voltage.
-\begin{figure}[h]
+Micro-channel plate photomultipliers (MCP-PMTs) are an example of a photosensor that is resistant to magnetic fields. The micro-channel plates (MCPs) are thin wafers containing 5-20 \(\mu\)m diameter capillaries. Typically, two wafers are arranged to form a chevron pattern. Similarly to PMTs, electrons produced via secondary emission with this MCP arrangement can achieve gains of \(10^6\) or more. This amplified electron signal is then recorded on an anode plate as an analogue voltage.
+
+\begin{figure}[ht]
 \centering
-\includegraphics[width=0.9\linewidth]{Images/mcp-pmt.png}
-\caption{\textbf{Cross section of a traditional MCP-PMT.} Due to the proximity of
-the anode and the photocathode, we are able to determine where the incident photon 
-hit. MCP-PMTs are used in an incredible range of fields, 
-from blood tests, to spectroscopy, laser radar \nolinebreak\cite{photonics12010046}.}\label{fig:traditional-mcp-pmt}
+\includegraphics[width=\linewidth]{Images/mcp-pmt2.png}
+\caption{\textbf{Cross section of a traditional MCP-PMT.} Not to scale. These plates are encased in a vacuum container. We are able to determine where the incident photon arrived from the anode signal. MCP-PMTs are used in an incredible range of fields, 
+from blood tests, to spectroscopy, laser radar. \nolinebreak\cite{photonics12010046}}\label{fig:traditional-mcp-pmt}
 \end{figure}
-The micro-channels of the MCP allow precise electron transit times towards the anode. They significantly reduce the path length difference between the electrons, leading to an extremely narrow signal temporal resolution. Modern devices achieve \(\leq50\text{ps}\) single-photon timing resolution \nolinebreak\cite{Lyashenko_2026,QianIHEP_2024,DavidsonPHOTEK_2025}. A lower timing resolution permits more accurate event reconstruction and PID in Cherenkov imaging detectors.
+
+The micro-channels of the MCP allow precise electron transit times towards the anode. They significantly reduce the path length difference between the electrons, leading to an extremely narrow signal temporal resolution. Modern devices achieve \(\leq50\text{ps}\) single-photon timing resolution\nolinebreak\cite{Lyashenko_2026,QianIHEP_2024,DavidsonPHOTEK_2025}. A lower timing resolution permits more accurate event reconstruction and PID in Cherenkov imaging detectors.
 
 The confinement of the electrons also helps to suppress any lateral motion due to \(e^-e^-\) repulsion or external magnetic fields. This improves the spatial resolution of the photosensor, as we are able to more precisely determine the location on the anode the signal originated from, indirectly improving both event reconstruction and PID.
 
-However, while they are an incredible vacuum-based photosensor technology, the use of MCPs brings new challenges. For one, due to the large temporary depletion of local electrons inside the micro-channels after an incident photoelectron, the MCPs can quickly become saturated. This means that they struggle as the flux of incident photons picks up, often referred to as being rate limited.
+However, while they are the pinnacle of vacuum-based photosensor technology, the use of MCPs brings new challenges. For one, due to the large temporary depletion of local electrons inside the micro-channels after an incident photoelectron, the MCPs can quickly become saturated. This means that they struggle as the flux of incident photons picks up, often referred to as being rate limited.
 
 MCP-PMTs are susceptible to dark counts. These are signals produced without an incident photoelectron. For MCP-PMTs, dark counts are dominated by thermionic emission at room temperature, field emission at high bias voltages, and positive-ion feedback during secondary emission avalanches. All of these processes produce charged particles, and they are able to damage the photocathode, with ion feedback causing the most issues. These processes can be minimised through cooling, vacuum conditions and shielding/coatings, yet they remain an intrinsic lifetime limitation of the MCP-PMTs. 
 
